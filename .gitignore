@@ -1,0 +1,7 @@
+#test.html, test.js 파일은 Repository에 저장하지 말 것
+test.html
+test.js
+
+# 뒤에 / 를 붙이면 디렉토리를 의미함
+# data 디렉토리에 있는 파일들은 Repositiory에 저장하지 말 것
+data/
