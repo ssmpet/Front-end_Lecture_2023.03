@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3의 배수</title>
+    <script>
+        function multiple3(){
+            num = Number(document.getElementById('num').value);
+
+            let resTag = document.getElementById('result');
+            if( num % 3 == 0 )
+                resTag.innerHTML = '<h4>3의 배수입니다</h4>';
+            else if( num % 3 == 1 )
+                resTag.innerHTML = '<h4>3으로 나눈 나머지가 1입니다.</h4>';
+            else
+                resTag.innerHTML = '<h4>3으로 나눈 나머지가 2입니다.</h4>';
+
+
+        }
+    </script>
+</head>
+<body style="margin:50px">
+    <input type="text" id="num" placeholder="정수를 입력하세요">
+    <button onclick="multiple3()">확인</button>
+    <br>
+    <p id="result"></p>
+</body>
+</html>
