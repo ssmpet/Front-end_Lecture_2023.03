@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>만 나이 계산</title>
+    <script>
+        function fullAge() {
+
+            let bYear = Number(document.getElementById('bYear').value);
+            let bMonth = Number(document.getElementById('bMonth').value);
+            let bDay = Number(document.getElementById('bDay').value);
+
+            const today = new Date();
+            const tYear = today.getFullYear();
+            const tMonth = today.getMonth() + 1;
+            const tDay = today.getDate();
+
+            let age = tYear-bYear;
+            if ( tMonth<bMonth || (tMonth==bMonth && tDay<bDay) ) age--;
+            
+            let resTag = document.getElementById('result')
+            resTag.innerHTML = '<h4>만 ' + age + '세 입니다.</h4>';
+        }
+    </script>
+</head>
+<body style="margin: 50px;">
+    <input type="text" id="bYear" placeholder="출생년도">
+    <input type="text" id="bMonth" placeholder="출생월">
+    <input type="text" id="bDay" placeholder="출생일">
+    <button onclick="fullAge()">만나이 계산</button>
+    <p id="result"></p>
+    
+</body>
+</html>

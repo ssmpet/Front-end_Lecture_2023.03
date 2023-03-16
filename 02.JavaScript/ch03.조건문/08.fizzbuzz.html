@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+    <script>
+        function FizzBuzz() {
+
+            let num = Number(document.getElementById("fz").value);
+
+            let strFizzBuzz='';
+            if ( num % 15 == 0 )
+                strFizzBuzz = "FizzBuzz";
+            else if( num % 3 == 0 ) 
+                strFizzBuzz = "Fizz";
+            else if ( num % 5 == 0 ) 
+                strFizzBuzz = "Buzz";
+            else
+                strFizzBuzz = num;
+
+            document.getElementById("result").innerHTML =  strFizzBuzz;
+            document.getElementById("fz").focus();
+        }
+    </script>
+</head>
+<body style="margin: 50px">
+    <input type="text" id="fz" placeholder="정수를 입력하세요.">
+    <button onclick="FizzBuzz()">게임시작</button>
+    <p id="result"></p>
+    
+</body>
+</html>
