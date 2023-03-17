@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 나타내기</title>
+    <script>
+        function mulGugu() {
+
+            let nSep = Number(document.getElementById('mul').value);
+
+            if ( Number.isNaN(nSep) ) {
+                document.getElementById('result').innerHTML = '숫자를 입력해 주세요';
+                return;
+            }
+                
+
+            let strResult = '';
+            
+            for (let i=1; i<10; i++) {
+                strResult += `${nSep} * ${i} = ${nSep*i}<br>`;
+            }
+
+            document.getElementById('result').innerHTML = strResult;
+            document.getElementById('mul').focus();
+        }
+
+
+        function setAlram() {
+
+            let nHour = Number(document.getElementById('nHour').value);
+            let nMin = Number(document.getElementById('nMin').value);
+
+            let newHour = nHour, newMin = 0;
+            newMin = nMin - 45;
+            if ( newMin < 0 ) { 
+                newMin = 60 + newMin;
+                newHour = (newHour==0)?23:nHour-1;
+            }
+
+            let strResult = `창영이의 방법으로 설정된 알람시간 <br><b> ${newHour} 시 ${newMin} 분 </b>`;
+
+            document.getElementById('resultA').innerHTML = strResult;
+        }
+
+        function setDice() {
+
+            let dice1 = parseInt(Math.ceil(Math.random() * 6));
+            let dice2 = parseInt(Math.ceil(Math.random() * 6));
+            let dice3 = parseInt(Math.ceil(Math.random() * 6));
+
+            let totalPrice = 0;
+            let numDice = 0;
+            let nSameNumber = 0;
+
+            if( dice1==dice2 && dice2==dice3 ) {
+                numDice = 3;
+                nSameNumber = dice1;
+            } else {
+                numDice = 2
+                if( dice1==dice2 )
+                    nSameNumber = dice1;
+                else if (dice2==dice3)
+                    nSameNumber = dice2;
+                else if (dice3==dice1)
+                    nSameNumber = dice3;
+                else
+                    numDice = 1;
+            }
+
+            switch (numDice) {
+                case 3:
+                    totalPrice = 10000 + nSameNumber * 1000;
+                    break;
+                case 2:
+                    totalPrice = 1000 + nSameNumber* 1000;
+                    break;
+                default:
+                    // 가장 큰 수 구하기
+                    let addr = [];
+                    addr.push(dice1);
+                    addr.push(dice2);
+                    addr.push(dice3);
+                    nSameNumber = 0;
+                    for ( let number of addr ) {
+                        if( nSameNumber < number ) nSameNumber = number;
+                    }
+                    totalPrice = 100 + nSameNumber * 100;
+                    break;
+            }
+
+            let strResult = `첫 번째 주사위 수 : ${dice1}<br>두 번째 주사위 수 : ${dice2}<br>세 번째 주사위 수 : ${dice3}<br><br><b>총 상금: ${totalPrice}원</b>`
+            document.getElementById('resultD').innerHTML = strResult;
+        }
+
+        function getThreeNumber() {
+            
+            let numberA=0, numberB=0, numberC=0;
+            for( let a=1; a<=1000; a++ ) {
+                for(let b=a+1; b<=1000; b++) {
+                    c = 1000 - a - b;
+                    if ( a*a + b*b == c*c ) {
+                        numberA = a;
+                        numberB = b;
+                        numberC = c;
+                    }
+                }
+            }
+            let strResult = `a : ${numberA}<br>b : ${numberB}<br>c : ${numberC}`;
+
+            document.getElementById('resultThreeNumber').innerHTML = strResult;
+        }
+    </script>
+</head>
+<body style="margin:50px">
+    <h2><strong>구구단 나타내기</strong></h2>
+    <input type="text" id="mul" placeholder="보고싶은 구구단 단수는?">
+    <button onclick="mulGugu()">결과는</button>
+    <p id="result"></p>
+    <br>
+    <hr>
+    <h2><strong>알람 시계</strong></h2>
+    <input type="text" id="nHour" placeholder="시간을 입력하세요.">
+    <input type="text" id="nMin" placeholder="분을 입력하세요.">
+    <button onclick="setAlram()">설정된 시간은</button>
+    <p id="resultA"></p>
+    <br>
+    <hr>
+    <h2><strong>주사위 게임</strong></h2>
+    <button onclick="setDice()">주사위 게임(버튼을 눌러주세요)</button>
+    <p id="resultD"></p>
+    <br>
+    <hr>
+    <h2><strong>세 변수 구하기</strong></h2>
+    <p>
+        삼각형 세변을 a, b, c ( a < b < c )라 하고 
+        a + b + c = 1000을 만족하는 직각삼각형의 세변을 구하시오.
+        (a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>)
+    </p>
+    <button onclick="getThreeNumber()">정 답</button>
+    <p id="resultThreeNumber"></p>
+    <br>
+
+</body>
+</html>

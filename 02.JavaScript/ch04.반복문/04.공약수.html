@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공약수 찾기</title>
+    <script>
+        function commonDivisors(){
+            let num1 = Number(document.getElementById('num1').value);
+            let num2 = Number(document.getElementById('num2').value);
+            
+            let commonDivisors = [];
+            for (let i = 1; i < ((num1>num2)?num2:num1); i++) {
+                if(num1 % i == 0 && num2 % i == 0) {
+                    commonDivisors.push(i);
+                }
+            }
+
+            let str = `<h4>${num1}, ${num2}의 공약수 : ${commonDivisors}</h4>`;
+            document.getElementById('result').innerHTML = str;
+
+        }
+    </script>
+</head>
+<body style="margin: 50px">
+    <h3>두 자연수의 공약수 찾기 입니다. <br>숫자를 입력해 주세요.</h3>
+    <input type="text" id="num1" placeholder="숫자를 입력해 주세요.">
+    <input type="text" id="num2" placeholder="숫자를 입력해 주세요.">
+    <button onclick="commonDivisors()">공약수 찾기</button>
+    <br>
+    <p id="result"></p>
+
+</body>
+</html>
