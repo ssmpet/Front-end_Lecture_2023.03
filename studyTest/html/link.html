@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 링크 관련 예제</title>
+    <style>
+        a:link {
+            color:green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color:pink;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover {
+            color:red;
+            background-color: transparent;
+            text-decoration:underline;
+        }
+        a:active {
+            color:yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        /* body {background-color: aqua;} */
+        
+        a.linkbutton:link, a.linkbutton:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a.linkbutton:hover, a.linkbutton:active {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="top1">The target Attribute</h2>
+    <a href="./child.html" target="_blank">Visit W3Schools!</a>
+    <P>If target="_blank", the link will open in a new browser window or tab.</P>
+    <hr>
+    <h2>Button as a Links</h2>
+
+    <p>Click the button to go to the HTML tutorial.</p>
+    <button onclick="document.location='https://www.w3schools.com/html/default.asp'">HTML Tutorial</button>
+
+    <hr>
+
+    <a href="./child.html" target="_self">HTML Images</a>
+    
+    <hr>
+    <h2>링크를 버트처럼</h2>
+    <a class="linkbutton" href="./child.html" target="_blank">링크버튼</a>
+
+    <hr>
+    <h2><a href="#top1">위로 가기</a></h2>
+    
+    <hr>
+    <h2>이미지 링크</h2>
+    <a href="./child.html">
+        <!-- <img src="./images/smiley.gif" alt="이미지 링크 테스트" width="42" height="42"></a> -->
+        <img src="./images/smiley.gif" alt="이미지 링크 테스트" style="width:24px; height:24px;">
+    </a>
+</body>
+</html>
