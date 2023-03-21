@@ -6,28 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML 테이블 관련 예제</title>
     <style>
-        table {
+        .table-basic {
             font-family: arial, sans-serif;
-            border: 1px solid black;
             /* border-collapse: collapse; */
+            /* border-radius: 10px; */
             width: 100%;
         }
-        td, th {
-            /* border: 1px solid #dddddd; */
-            border: 1px solid black;
+        .table-basic caption {
+            padding: 5px;
+        }
+        .table-basic td, th {
+            border: 1px solid #dddddd;
+            border-radius: 10px;
             text-align: center;
-            /* padding: 5px; */
+            padding: 5px;
         }
 
-        tr:nth-child(even) {
+        .table-basic tr:nth-child(even) {
             background-color: #dddddd;
         }
+
+        .table-style {
+            width: 100%;
+            
+        }
+        .table-style tr, td {
+            /* border-style: dotted; */
+            /* border-style: dashed; */
+            /* border-style: solid; */
+            /* border-style: double; */
+            /* border-style: groove; */
+            /* border-style: ridge; */
+            border-style: inset;
+            /* border-style: outset; */
+            /* border-style: none; */
+            /* border-style: hidden; */
+        }
+        .table-style tr:hover {
+            background-color: #D6eeee;
+
+        }
+        
 
     </style>
 </head>
 <body>
     <h2>HTML Table</h2>
-    <table>
+    <table class="table-basic">
+        <caption><strong>테이블 입니다.</strong></caption>
+        <!-- <colgroup>
+            <col span="2" style="background-color: azure;">
+            <col style="background-color: antiquewhite;">
+        </colgroup> -->
         <tr>
             <th>Company</th>
             <th>Contact</th>
@@ -62,6 +92,21 @@
             <td>6행 1열</td>
             <td>6행 2열</td>
             <td>6행 3열</td>
+        </tr>
+    </table>
+
+    <br>
+    <h2>테이블 스타일</h2>
+    <table class="table-style" >
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+            <td>2행 3열</td>
         </tr>
     </table>
     
