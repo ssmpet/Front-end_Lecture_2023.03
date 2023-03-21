@@ -102,12 +102,20 @@ console.log('33'.split('3').length); // ['','','']
 // 1에서 1000까지의 숫자가 있다.
 // 0은 몇번, 1은 몇번, ..., 9는 몇번 사용되는가?
 console.log('=============================');
+
+function strCount(str, dst) {
+    return str.split(dst).length - 1; // str에서 dst가 몇 번 사용되는가?
+}
+
+// 방법 1
 let numbers = [0,0,0,0,0,0,0,0,0,0];
 
 for (let i=1; i<=1000; i++) {
     let str = String(i);
     for (let num=0; num<10; num++) {
-        numbers[num] += str.split(num).length-1;
+        // numbers[num] += str.split(num).length-1;
+        numbers[num] += strCount(str, num);
+
     }
 }
 
@@ -116,16 +124,19 @@ for (let i=0; i<10; i++) {
     console.log(`${i} 는 ${numbers[i]}개 사용되었습니다.`);
 }
 
+// 방법 2
 console.log('=============================');
 let strNumber = '';
 for (let i=1; i<=1000; i++)  strNumber += i;
 for (let num=0; num<10; num++) {
-    console.log(`${num} 는 ${strNumber.split(String(num)).length-1}번 사용되었습니다.`);
+    strCount
+    // console.log(`${num} 는 ${strNumber.split(String(num)).length-1}번 사용되었습니다.`);
+    console.log(`${num} 는 ${strCount(strNumber, num)}번 사용되었습니다.`);
 }
 
 console.log('=============================');
 // isPalindrome 함수 만들기
-
+// 방법 1
 function isPalindrome(basicStr) {
     let lenStr = parseInt(basicStr.length/2);
     
@@ -139,6 +150,7 @@ function isPalindrome(basicStr) {
 if(isPalindrome('SdeOedS')) console.log('isPalindrome 입니다.');
 else console.log('isPalindrome가 아닙니다.');
 
+// 방법 2
 function isPalindrome2(str) {
     let reverseStr = '';
     for(let i=str.length-1; i>=0; i--)
@@ -149,10 +161,12 @@ console.log(isPalindrome2('우영우'));
 
 console.log('=============================');
 // C:\\Program Files\\node.js\\node.exe에서 파일명만 출력하세요.
+// 방법 1
 let path =  'C:\\Program Files\\node.js\\node.exe';
 let newPStr = path.split('\\');
 console.log(newPStr[newPStr.length-1]);
 
+// 방법 2
 let index = path.lastIndexOf('\\');
 let filename = path.substring(index+1);
 console.log(filename);
