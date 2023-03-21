@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript string 자료형 예제</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+       
+        .numberCountTable td {
+            border: 1px solid #000; 
+            /* border-radius: 10px; */
+            border-collapse: collapse;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
     <script>
         function digitCount() {
             let totalSecond = 0;
@@ -15,13 +27,14 @@
                         totalSecond += 60;
                 }
             }
-            let sPec = document.getElementById('digitCountResult'); 
-            sPec.innerHTML = `<b>${totalSecond}<b> 초 입니다.`;
+            let strResult = document.getElementById('digitCountId'); 
+            strResult.innerHTML = `<b>${totalSecond}<b> 초 입니다.`;
 
-            sPec.style.backgroundColor = 'Tomato';
-            sPec.style.textAlign = 'center';
-            sPec.style.color = 'white';
-            sPec.style.padding = '4px';
+            strResult.style.backgroundColor = 'Tomato';
+            strResult.style.textAlign = 'center';
+            strResult.style.color = 'white';
+            strResult.style.padding = '10px';
+            // strResult.style.width = '30%';
 
         
         }
@@ -31,25 +44,7 @@
         }
 
 
-        function addNodeTable() {
-
-            let tbody = document.querySelector(".numberCountTable");
-            tbody.setAttribute("style", "border-style: inset");
-
-            let tr = document.createElement('tr');
-            
-            for (let i=0; i<10; i++) {
-                let td = document.createElement('td');
-                td.setAttribute("style" , "text-align:center");
-                td.appendChild(document.createTextNode("test"));	
-                tr.appendChild(td);
-             
-
-            }
-            tbody.appendChild(tr);
-
-        }
-
+        
         function numberCount() {
 
             let strNumber = '';
@@ -57,53 +52,55 @@
             for (let i=1; i<=1000; i++)  strNumber += i;
 
             let tbody = document.querySelector(".numberCountTable");
-            tbody.setAttribute("style", "border: 1px solid #dddddd; padding: 5px");
+            tbody.setAttribute('style', 'border: 1px solid #000;');
 
             
             for (let num=0; num<10; num++) {
                 
                 let tr = document.createElement('tr');
+                if(num % 2 == 0) tr.setAttribute('style', 'background-color: #dddddd;');
+
                 let td = document.createElement('td');
-                tr.setAttribute('style', 'tr:nth-child(even)');
-
-                td.setAttribute("style" , "text-align:center; width=20% border: 1px solid #dddddd; padding: 5px; border-radius: 10px;");
-                td.appendChild(document.createTextNode(`${num}`));	
+                td.innerHTML = `<b>${num}</b>`;
                 tr.appendChild(td);
+
                 td = document.createElement('td');
-                td.setAttribute("style" , "text-align:center; width=80% border: 1px solid #dddddd padding: 5px; border-radius: 10px");
-
-                td.appendChild(document.createTextNode(`${strCount(strNumber, num)}`));	
+                td.innerHTML = `<b>${strCount(strNumber, num)}</b> 번`;
                 tr.appendChild(td);
 
-                strReturn += `<b>${num}</b> 는 <b>${strCount(strNumber, num)}</b>번 사용되었습니다.<br>`;
+                strReturn += `<b>${num}</b> : <b>${strCount(strNumber, num)}</b>번 사용<br>`;
 
                 tbody.appendChild(tr);
             }
             
-            let numCntResult = document.getElementById('numberCountResult');
+            let numCntResult = document.getElementById('numberCountId');
             numCntResult.innerHTML = strReturn;
 
-            numCntResult.style.backgroundColor = 'Violet';
+            numCntResult.style.backgroundColor = '#f1aeec';
             numCntResult.style.textAlign = 'center';
-            numCntResult.style.color = 'blue';
+            numCntResult.style.color = '#2c031f';
+            numCntResult.style.padding = '5px';
 
-
-            
         }
 
         function isPalindrome() {
-            let txtPalindrome = document.getElementById('inputPalindrome').value;
-            let reverseStr = txtPalindrome.split('').reverse().join('');
-            console.log(txtPalindrome);
-            console.log(reverseStr);
+            let ipPalindrome = document.getElementById('inputPalindrome').value;
+            if (ipPalindrome==''){
+                document.getElementById('inputPalindrome').focus();
+                return;
+
+            } 
+
+            let reverseStr = ipPalindrome.split('').reverse().join('');
+            
             
             let strResult = '';
-            if ( txtPalindrome == reverseStr )
+            if ( ipPalindrome == reverseStr )
                 strResult = '<b>Palindrome 글자입니다.</b>';
             else 
                 strResult = '<b>Palindrome 글자가 아닙니다.</b>';
 
-            let strPalindrome = document.getElementById('isPalindromeResult');
+            let strPalindrome = document.getElementById('isPalindromeId');
             strPalindrome.innerHTML = strResult;
 
             strPalindrome.style.backgroundColor = 'orange';
@@ -117,70 +114,47 @@
     </script>
 </head>
 <body style="margin: 40px;">
-    <table width="80%">
-        <tr>
-            <th>
-                <h2><strong>디지털 시계</strong></h2>
-            </th>
-        </tr>
-        <tr>
-            <td>
-            디지털 시계, 00:00 ~ 23:59<br>
-            하루동안 3이 한개 표시되는 시간은 몇 초인가?
-            <button onclick="digitCount()">결과는?</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <hr>
-                <p id="digitCountResult" class="digitCountClass"></p>
-            </td>
-        </tr>
-    </table>
 
-    <table width="80%">
-        <tr>
-            <th>
-                <h2><strong>1 ~ 1000 까지의 숫자</strong></h2>
-            </th>
-        </tr>
-        <tr>
-            <td>
-            1에서 1000까지의 숫자가 있습니다.<br>
-            각가의 숫자는 ( 0은 몇번, 1은 몇번, ..., 9는 몇번) 몇 번씩 사용되었습니까?
-            <button onclick="numberCount()">결과는?</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <hr>
-                <p id="numberCountResult"></p>
-                <table class="numberCountTable" width="80%" style="border: 1px solid #dddddd;"></table>
-            </td>
-        </tr>
-    </table>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" style="text-align:center">
+                <div>
+                    <h2><strong>디지털 시계</strong></h2>
+                    <br>
+                    디지털 시계, 00:00 ~ 23:59<br>
+                    하루동안 3이 한개 표시되는 시간은 몇 초인가?
+                    <button onclick="digitCount()">결과는?</button>
+                    <hr>
+                    <p class="mx-auto p-2" id="digitCountId" style="width:50%"></p>
+                </div>
 
-    <table width="80%">
-        <tr>
-            <th>
-                <h2><strong>Palindrome 글자 입니까?</strong></h2>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                Palindrome 글자를 만들어 보세요. ( ex: SOS, 우영우 )
-                <br><br>
-                <input type="text" id="inputPalindrome" placeholder="글자를 입력해주세요. ">
-                <button onclick="isPalindrome()">결과는?</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <hr>
-                <p id="isPalindromeResult"></p>
-            </td>
-        </tr>
-    </table>
+                <div class="mt-5">
+                    <h2><strong>1 ~ 1000 까지의 숫자</strong></h2>
+                    <br>
+                    1에서 1000까지의 숫자가 있습니다.<br>
+                    각가의 숫자는 ( 0은 몇번, 1은 몇번, ..., 9는 몇번) 몇 번씩 사용되었습니까?
+                    <button onclick="numberCount()">결과는?</button>
+                    <hr>
+                    <p class="mx-auto p-2" id="numberCountId" style="width:80%"></p>
+                    <table class="numberCountTable mx-auto"  width="80%"></table>
+                </div>
+
+                <div class="mt-5" >
+                    <h2><strong>Palindrome 글자 입니까?</strong></h2>
+                    Palindrome 글자를 만들어 보세요. ( ex: SOS, 우영우 )
+                    <br><br>
+                    <input type="text" id="inputPalindrome" placeholder="글자를 입력해주세요. ">
+                    <button onclick="isPalindrome()">결과는?</button>
+                    <hr>
+                    <p class="mx-auto p-2" id="isPalindromeId" style="width:50%"></p>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+    
 
 </body>
 </html>
