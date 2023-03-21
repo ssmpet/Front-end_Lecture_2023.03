@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript string 자료형 예제</title>
+    <script>
+        function digitCount() {
+            let totalSecond = 0;
+            for(let hour=0; hour<24; hour++){
+                for(let min=0; min<60; min++){
+                    let display = hour + ":" + min;
+                    if(display.indexOf('3') >= 0) // display에 3이 있으면 0 이상인 값을 반환
+                        totalSecond += 60;
+                }
+            }
+            let sPec = document.getElementById('digitCountResult'); 
+            sPec.innerHTML = `<b>${totalSecond}<b> 초 입니다.`;
+
+            sPec.style.backgroundColor = 'Tomato';
+            sPec.style.textAlign = 'center';
+            sPec.style.color = 'white';
+            sPec.style.padding = '4px';
+
+        
+        }
+
+        function strCount(str, dst) {
+            return str.split(dst).length - 1; // str에서 dst가 몇 번 사용되는가?
+        }
+
+
+        function addNodeTable() {
+
+            let tbody = document.querySelector(".numberCountTable");
+            tbody.setAttribute("style", "border-style: inset");
+
+            let tr = document.createElement('tr');
+            
+            for (let i=0; i<10; i++) {
+                let td = document.createElement('td');
+                td.setAttribute("style" , "text-align:center");
+                td.appendChild(document.createTextNode("test"));	
+                tr.appendChild(td);
+             
+
+            }
+            tbody.appendChild(tr);
+
+        }
+
+        function numberCount() {
+
+            let strNumber = '';
+            let strReturn = '';
+            for (let i=1; i<=1000; i++)  strNumber += i;
+
+            let tbody = document.querySelector(".numberCountTable");
+            tbody.setAttribute("style", "border: 1px solid #dddddd; padding: 5px");
+
+            
+            for (let num=0; num<10; num++) {
+                
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                tr.setAttribute('style', 'tr:nth-child(even)');
+
+                td.setAttribute("style" , "text-align:center; width=20% border: 1px solid #dddddd; padding: 5px; border-radius: 10px;");
+                td.appendChild(document.createTextNode(`${num}`));	
+                tr.appendChild(td);
+                td = document.createElement('td');
+                td.setAttribute("style" , "text-align:center; width=80% border: 1px solid #dddddd padding: 5px; border-radius: 10px");
+
+                td.appendChild(document.createTextNode(`${strCount(strNumber, num)}`));	
+                tr.appendChild(td);
+
+                strReturn += `<b>${num}</b> 는 <b>${strCount(strNumber, num)}</b>번 사용되었습니다.<br>`;
+
+                tbody.appendChild(tr);
+            }
+            
+            let numCntResult = document.getElementById('numberCountResult');
+            numCntResult.innerHTML = strReturn;
+
+            numCntResult.style.backgroundColor = 'Violet';
+            numCntResult.style.textAlign = 'center';
+            numCntResult.style.color = 'blue';
+
+
+            
+        }
+
+        function isPalindrome() {
+            let txtPalindrome = document.getElementById('inputPalindrome').value;
+            let reverseStr = txtPalindrome.split('').reverse().join('');
+            console.log(txtPalindrome);
+            console.log(reverseStr);
+            
+            let strResult = '';
+            if ( txtPalindrome == reverseStr )
+                strResult = '<b>Palindrome 글자입니다.</b>';
+            else 
+                strResult = '<b>Palindrome 글자가 아닙니다.</b>';
+
+            let strPalindrome = document.getElementById('isPalindromeResult');
+            strPalindrome.innerHTML = strResult;
+
+            strPalindrome.style.backgroundColor = 'orange';
+            strPalindrome.style.textAlign = 'center';
+            strPalindrome.style.color = 'blue';
+
+
+        }
+
+
+    </script>
+</head>
+<body style="margin: 40px;">
+    <table width="80%">
+        <tr>
+            <th>
+                <h2><strong>디지털 시계</strong></h2>
+            </th>
+        </tr>
+        <tr>
+            <td>
+            디지털 시계, 00:00 ~ 23:59<br>
+            하루동안 3이 한개 표시되는 시간은 몇 초인가?
+            <button onclick="digitCount()">결과는?</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <hr>
+                <p id="digitCountResult" class="digitCountClass"></p>
+            </td>
+        </tr>
+    </table>
+
+    <table width="80%">
+        <tr>
+            <th>
+                <h2><strong>1 ~ 1000 까지의 숫자</strong></h2>
+            </th>
+        </tr>
+        <tr>
+            <td>
+            1에서 1000까지의 숫자가 있습니다.<br>
+            각가의 숫자는 ( 0은 몇번, 1은 몇번, ..., 9는 몇번) 몇 번씩 사용되었습니까?
+            <button onclick="numberCount()">결과는?</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <hr>
+                <p id="numberCountResult"></p>
+                <table class="numberCountTable" width="80%" style="border: 1px solid #dddddd;"></table>
+            </td>
+        </tr>
+    </table>
+
+    <table width="80%">
+        <tr>
+            <th>
+                <h2><strong>Palindrome 글자 입니까?</strong></h2>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Palindrome 글자를 만들어 보세요. ( ex: SOS, 우영우 )
+                <br><br>
+                <input type="text" id="inputPalindrome" placeholder="글자를 입력해주세요. ">
+                <button onclick="isPalindrome()">결과는?</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <hr>
+                <p id="isPalindromeResult"></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

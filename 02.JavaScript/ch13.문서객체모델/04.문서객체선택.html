@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+    <script>
+        function handler() {
+            // 첫번째 h1태그의 배경색을 yellow를
+            document.querySelector('h1').style.backgroundColor = 'yellow'
+
+            // 모든 h1 태그의 글다색을 blue
+            let h1Array = document.querySelectorAll('h1');
+            for (let h1 of h1Array)
+                h1.style.color = 'blue';
+
+            // class가 header1 인 요소의 배경색을 beige로 
+            let header1Array = document.querySelectorAll('.header1');
+            for (let h1 of header1Array) 
+                h1.style.backgroundColor = 'beige';
+
+            // id가 header1 인 요소의 텍스트를 From Javascript로 
+            document.querySelector('#header1').innerHTML = 'From Javascript';
+
+        }
+    </script>
+</head>
+<body style="margin: 40px">
+    <h1>Header No.1</h1>
+    <h1 class="header1">Header No.2</h1>
+    <h1 id="header1">Header No.3</h1>
+    <h1 class="header1">Header No.4</h1>
+    <button onclick="handler()">Go!!!</button>
+</body>
+</html>

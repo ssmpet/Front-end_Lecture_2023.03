@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성</title>
+    <style>
+        .class1 { color:blue;}
+        .class2 { background-color: azure;}
+    </style>
+
+    <script>
+
+        function addNodeTable() {
+            let tbody = document.querySelector(".table");
+            tbody.setAttribute("style", "border-style: inset");
+            let tr = document.createElement('tr');
+            
+            let td = document.createElement('td');
+            td.setAttribute("style" , "text-align:center");
+            td.appendChild(document.createTextNode("test"));	
+            tr.appendChild(td);
+            
+            let td2 = document.createElement('td');
+            td2.appendChild(document.createTextNode("test2"));	
+            tr.appendChild(td2);
+
+            
+            tbody.appendChild(tr);
+
+
+        }
+
+        function addNode() {
+            const h3 = document.createElement('h3');
+            h3.classList.add('class1', 'class2') // class="class1 class2"
+            const textNode = document.createTextNode('홍길동');
+            h3.appendChild(textNode);
+            document.body.appendChild(h3);
+        }
+
+        function removeNode() {
+            const h3 = document.querySelector('.class1');
+            document.body.removeChild(h3);
+
+        }
+
+    </script>
+</head>
+<body style="margin: 40px;">
+    <h3>당신의 이름은 무엇입니까?</h3>
+    <button onclick="addNode()">추가</button>    
+    <button onclick="removeNode()">삭제</button>    
+    <hr>
+    <button onclick="addNodeTable()">테이블추가</button>  
+
+    <table class="table"></table>  
+
+</body>
+</html>

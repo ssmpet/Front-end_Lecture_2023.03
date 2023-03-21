@@ -129,7 +129,7 @@ console.log('=============================');
 let strNumber = '';
 for (let i=1; i<=1000; i++)  strNumber += i;
 for (let num=0; num<10; num++) {
-    strCount
+    
     // console.log(`${num} 는 ${strNumber.split(String(num)).length-1}번 사용되었습니다.`);
     console.log(`${num} 는 ${strCount(strNumber, num)}번 사용되었습니다.`);
 }
