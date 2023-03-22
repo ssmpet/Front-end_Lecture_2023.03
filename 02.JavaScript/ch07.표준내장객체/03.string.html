@@ -34,17 +34,12 @@
             strResult.style.textAlign = 'center';
             strResult.style.color = 'white';
             strResult.style.padding = '10px';
-            // strResult.style.width = '30%';
-
-        
         }
 
         function strCount(str, dst) {
             return str.split(dst).length - 1; // str에서 dst가 몇 번 사용되는가?
         }
 
-
-        
         function numberCount() {
 
             let strNumber = '';
@@ -54,7 +49,6 @@
             let tbody = document.querySelector(".numberCountTable");
             tbody.setAttribute('style', 'border: 1px solid #000;');
 
-            
             for (let num=0; num<10; num++) {
                 
                 let tr = document.createElement('tr');
@@ -88,11 +82,9 @@
             if (ipPalindrome==''){
                 document.getElementById('inputPalindrome').focus();
                 return;
-
             } 
 
             let reverseStr = ipPalindrome.split('').reverse().join('');
-            
             
             let strResult = '';
             if ( ipPalindrome == reverseStr )
@@ -107,7 +99,19 @@
             strPalindrome.style.textAlign = 'center';
             strPalindrome.style.color = 'blue';
 
+        }
 
+        function getFilePath() {
+            let strFilePath = document.getElementById('inputFilePath').value;
+
+            let index = strFilePath.lastIndexOf('\\');
+            let filename = strFilePath.substring(index+1);
+
+            let strFileName = document.getElementById('filePahtId');
+            strFileName.innerHTML = '<b>'+filename+'</b>';
+            strFileName.style.backgroundColor = 'orange';
+            strFileName.style.textAlign = 'center';
+            strFileName.style.fontSize = '120%'
         }
 
 
@@ -149,6 +153,17 @@
                     <hr>
                     <p class="mx-auto p-2" id="isPalindromeId" style="width:50%"></p>
                 </div>
+
+                <div class="mt-5" >
+                    <h2><strong>파일명만 출력하세요.</strong></h2>
+                    
+                    <br><br>
+                    <input type="text" id="inputFilePath" placeholder="경로을 입력해 주세요.">
+                    <button onclick="getFilePath()">확인</button>
+                    <hr>
+                    <p class="mx-auto p-2" id="filePahtId" style="width:80%"></p>
+                </div>
+
             </div>
             <div class="col-2"></div>
         </div>

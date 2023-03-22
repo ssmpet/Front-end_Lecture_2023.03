@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 처리</title>
+    <script>
+        function btn2click() {
+            alert('버튼 2가 클릭되었음.');
+        }
+
+        window.onload = function() {
+            const btn3 = document.getElementById('btn3');
+            btn3.onclick = function() {
+                alert('버튼 3이 클릭되었음.');
+            }
+
+            // 마우스 오버/마우스 아웃  이벤트에 대해서 h3 텍스트 보이기/감추기
+            const btn4 = document.getElementById('btn4');
+            btn4.addEventListener('click', function() {
+                alert('버튼 4가 클릭되었음.');
+            });
+            btn4.addEventListener('mouseover', function(){
+                const h3 = document.createElement('h3');
+                const textNode = document.createTextNode('마우스 오버 이벤트 발생');
+                h3.appendChild(textNode);
+                document.body.appendChild(h3);
+            });
+            btn4.addEventListener('mouseout', function(){
+                const h3 = document.querySelector('h3');
+                document.body.removeChild(h3);
+            });
+
+            // 마우스 오버/마우스 아웃 이벤트에 대해서 img 보이기/감추기
+            const btn5 = document.getElementById('btn5');
+            btn5.addEventListener('mouseover', () => {
+                const img = document.createElement('img');
+                img.src = './github.png';
+                img.width = 200;
+                img.style.margin = '30px';
+                document.body.appendChild(img);
+            });
+            btn5.addEventListener('mouseout', () => {
+                const img = document.querySelector('img');
+                document.body.removeChild(img);
+            });
+
+            // a 테그의 기본 이벤트 처리를 제거
+            const btn6 = document.getElementById('btn6');
+            btn6.onclick = function(){
+                alert('a 태그의 기본 이벤트 처리를 못하게 하였음.');
+                const a = document.querySelector('a');
+                a.onclick = function() { return false; }; // 기본 이벤트 처리 제거
+            };
+        }
+    </script>
+</head>
+<body style="margin: 40px">
+    <button onclick="alert('버튼1이 클릭되었음.')">버튼 1</button>
+    <button onclick="btn2click()">버튼 2</button>
+    <button id="btn3">버튼 3</button>
+    <br><br>
+    <button id="btn4">버튼 4</button>
+    <button id="btn5">버튼 5</button>
+    <br><br>
+    <button id="btn6">버튼 6</button>
+    <a href="http://www.hanbit.co.kr/academy/">한빛아카데미</a><br>
+</body>
+</html>
