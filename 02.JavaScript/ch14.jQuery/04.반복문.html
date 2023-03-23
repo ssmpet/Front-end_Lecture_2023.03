@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery CSS 선택자</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function() {
+
+           const $lis = $('li');
+           for (let i = 0; i < $lis.length; i++){
+                if ( i % 2 == 1) {  // 두번재, 네 번째 등 짝수번째
+                    const li = $lis.get(i);
+                    $(li).css('backgroundColor', 'yellow');
+                }
+           }
+
+           $('li').each(function(index, element) {
+                if( index % 2 == 0) {
+                    // 해당 element는 $(this)로 매핑
+                    $(this).css('backgroundColor', 'beige');
+                } else {
+                    $(this).css('color', 'red');
+                }
+           });
+
+        $('span').each(function(index, _){
+                if (index % 2 == 0){
+                    $(this).css('fontSize', '30px');
+                } else {
+                    $(this).css('fontSize', '20px');
+                }
+           });
+
+        });
+    </script>
+
+
+</head>
+<body style="margin: 40px">
+    <ul id="fruits"><span>내가 좋아하는 과일</span>
+        <li class="national">사과</li>
+        <li class="foreign">바나나</li>
+        <li class="national">감</li>
+        <li class="foreign">파인애플</li>
+    </ul>
+    <ul id="food"><span>내가 좋아하는 음식</span>
+        <li class="national">김치찌개</li>
+        <li class="foreign">파스타</li>
+        <li class="national">갈비찜</li>    
+    </ul>
+</body>
+</html>

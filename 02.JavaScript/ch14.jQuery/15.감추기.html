@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 감추기</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function() {
+           
+               $('.hide').click(function(e){
+                    $('div').hide();
+               });
+               $('.show').click(function(e){
+                    $('div').show();
+               });
+        });
+    </script>
+
+</head>
+<body style="margin: 40px">
+    <div style="margin-bottom: 10px">
+        <p>버튼을 누르면 이벤트를 처리합니다.</p>
+        <img src="https://picsum.photos/640/360" alt="이미지">
+    </div>
+    <button class="hide">블럭 감추기</button>
+    <button class="show">블럭 보이기</button>
+</body>
+</html>

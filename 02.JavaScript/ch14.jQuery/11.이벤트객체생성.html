@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 이벤트 객체생성</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            $('h1').on('click', function(e){
+                $('<h1></h1>')
+                    .text('현재 줄에서는 헤더가 생성되지 않음')
+                    .appendTo('body');
+            });
+           
+            const handler = function(e) {
+                $('<h2></h2>')
+                    .text('지금 줄에서 헤더가 생성 됨')
+                    .on('click', handler)
+                    .appendTo('body');                
+            };
+            $('h2').click(handler);
+
+        });
+    </script>
+
+</head>
+<body style="margin: 40px">
+    <h1>첫번재 줄에서만 헤더가 생성</h1>
+    <h2>모든 줄에서 헤더가 생성됨</h2>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 이벤트 제거</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function() {
+            const handler = function(e) {
+
+                // 새로 만든 테그에 이벤트 추가
+                $('<h2></h2>').text($(this).text())
+                    .on('click', handler)
+                    .appendTo('body');
+
+                // 지존 테그에서 이벤트 제거
+                $(this).off('click');
+
+            };
+
+            $('h2').click(handler);
+            
+        });
+    </script>
+
+</head>
+<body style="margin: 40px">
+    <h2>새로 만든 줄에서만 이벤트가 발생</h2>
+</body>
+</html>

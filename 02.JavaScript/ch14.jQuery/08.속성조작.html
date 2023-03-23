@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 속성 조작</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function() {
+            $('img').attr('src', 'https://picsum.photos/640/360')
+                    .attr('alt', '임의의 이미지')
+                    .attr('title', '임의의 이미지')
+                    .attr('width', '320px');
+
+            for (let i=0; i<4; i++) {
+                $('<img></img>').css('margin', '5px')
+                                .attr('src', 'https://picsum.photos/300/200?='+i)
+                                .appendTo('body');
+            }
+        });
+    </script>
+
+</head>
+<body style="margin: 40px">
+    <img src="" alt="">
+    <hr>
+</body>
+</html>

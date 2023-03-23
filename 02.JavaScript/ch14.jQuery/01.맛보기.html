@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 맛보기</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            const pjs = document.getElementById('js');
+            pjs.innerHTML = '자바스크립트가 동적으로 생성';
+            pjs.style.backgroundColor = 'yellow';
+            pjs.style.fontSize = '30px';
+            pjs.style.color = 'red';
+
+            jQuery('#jq').text('jQuery가 동적으로 생성');
+            jQuery('#jq').css('backgroundColor', 'beige');
+            jQuery('#jq').css('fontSize', '30px');
+            jQuery('#jq').css('color', 'green');
+
+            // jQuery를 사용하는 일반적인 형대, write less, do more
+            $('#jq2').text('jQuery가 축약해서 동적으로 생성')
+                     .css('backgroundColor', 'yellow')
+                     .css('fontSize', '30px')
+                     .css('color', 'green');
+        }
+    </script>
+
+</head>
+<body style="margin: 40px">
+    <p id="js"></p>
+    <p id="jq"></p>
+    <p id="jq2"></p>
+</body>
+</html>
