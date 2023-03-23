@@ -20,3 +20,8 @@ for( let i=48; i>=10; i-=3 ) {
     
 }
 console.log(`48 ~ 10 3의 배수의 합 = ${thSum}`);
+
+let a = [1,2,5,7,8];
+a.forEach(function(element, index){
+    console.log(index, element);
+});
