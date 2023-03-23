@@ -8,11 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script>
 
-        function nameTest() {
-            let ele = document.querySelector('#input2');
-            ele.setAttribute('value', '클래스 이름을 잘 가져왔습니다.');
-        }
-
+       
         $(document).ready(function() {
 
             $('.input1')
@@ -31,7 +27,6 @@
     <br>
     <p>글자를 입력할 때 마다 어떤 글자가 입력되었는지 : <span id='keyup'></span></p>
     <p>글자를 입력하고 엔터를 쳤을 때 : <span id="change"></span></p>
-    <p>입력 : <input type="text" id="input2" class="class2" name="name2"></p>
-    <button onclick="nameTest()">확인</button>
+    
 </body>
 </html>
