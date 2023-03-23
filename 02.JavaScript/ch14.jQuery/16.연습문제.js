@@ -5,9 +5,7 @@ $(document).ready(function() {
     $('.question3').click(question3);
 
     question4();
-    setInterval(function() {
-        question4();
-    }, 1000);
+    setInterval(function(){question4();}, 1000);
 
 });
 
@@ -25,7 +23,6 @@ function question1() {
     
     let firstNum = Number($('#number1').val());
     let secNum = Number($('#number2').val());
-    
 
     if( !rangeCheck(firstNum, secNum) ) {
         $('#que1Result').html('입력한 숫자가 규칙에 맞지 않습니다.');
@@ -36,7 +33,6 @@ function question1() {
     let result = '<b>';
     let i = 1;
     for (let exp=firstNum; exp <= secNum; exp++) {
-        // arr.push(Math.pow(2, exp));
         arr.push(2**exp);
         result += '2<sup>' + exp + '</sup>    ';
         if (i % 10 == 0) result += '<br>';
@@ -46,11 +42,13 @@ function question1() {
 
     for (let i = 0; i<arr.length; i++) {
         
-        if ( (i+1)%5==0) result += arr[i] +'<br>';
-        else result += arr[i] + ', ';
+        result += arr[i];
+        if ( (i+1)%5==0) result += '<br>';
+        else {
+            if( i < arr.length-1) result += ', ';
+        }
     }
-    // arr.join(', ');
-    
+
     result += '</b>'
 
     $('#que1Result').html(result);
