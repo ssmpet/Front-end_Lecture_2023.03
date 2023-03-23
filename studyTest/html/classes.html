@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Classes</title>
+    <style>
+        #myHeader {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .city {
+            background-color: tomato;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .main {
+            text-align: center;
+        }
+ 
+        .note {
+
+          font-size: 120%;
+          color: red;
+        }
+    </style>
+    <script>
+      function myFunction() {
+
+        let x = document.querySelectorAll('.h2city');
+        for( let i=0; i<x.length; i++)
+            x[i].style.display = 'none';
+
+      }
+    </script>
+</head>
+<body>
+    
+    
+    <div class="city main">
+        <h2 class="h2city">London</h2>
+        <p>London is the capital of England.</p>
+    </div>
+    
+    <div class="city">
+        <h2 class="h2city">Paris</h2>
+        <p>Paris is the capital of France.</p>
+    </div>
+    
+    <div class="city">
+        <h2 class="h2city">Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <h1>My <span class="note">Important</span> Heading</h1>
+    <p>This is some <span class="note">important</span> text.</p>
+
+    <button onclick="myFunction()">Hide elements</button>
+
+    <h1 id="myHeader">My Cities</h1>
+
+</body>
+</html>
