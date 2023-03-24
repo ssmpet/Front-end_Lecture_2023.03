@@ -26,6 +26,7 @@ function question1() {
 
     if( !rangeCheck(firstNum, secNum) ) {
         $('#que1Result').html('입력한 숫자가 규칙에 맞지 않습니다.');
+        $('#number1').focus();
         return;
     } 
 
@@ -120,22 +121,26 @@ function question4() {
     let strDate = strToday.substring(2, 4) + '년 ' + strToday.substring(5, 7) + '월 ' + strToday.substring(8, 10) + '일';
     let strTime = strToday.substring(11, 19);   // 16:27:00
 
-    let hourSrc1 = './images/number' + strTime[0] + '.png';
-    let hourSrc2 = './images/number' + strTime[1] + '.png';
-    let minSrc1 = './images/number' + strTime[3] + '.png';
-    let minSrc2 = './images/number' + strTime[4] + '.png';
-    let secSrc1 = './images/number' + strTime[6] + '.png';
-    let secSrc2 = './images/number' + strTime[7] + '.png';
-
+    // let hourSrc1 = './images/number' + strTime[0] + '.png';
+    // let hourSrc2 = './images/number' + strTime[1] + '.png';
+    // let minSrc1 = './images/number' + strTime[3] + '.png';
+    // let minSrc2 = './images/number' + strTime[4] + '.png';
+    // let secSrc1 = './images/number' + strTime[6] + '.png';
+    // let secSrc2 = './images/number' + strTime[7] + '.png';
 
     $('#todaydate').html(strDate)
                     .css('fontSize', '130%');
 
-    $('#hour2').attr('src', hourSrc2);
-    $('#hour1').attr('src', hourSrc1);
-    $('#hour2').attr('src', hourSrc2);
-    $('#min1').attr('src', minSrc1);
-    $('#min2').attr('src', minSrc2);
-    $('#sec1').attr('src', secSrc1);
-    $('#sec2').attr('src', secSrc2);
+    const mapping = [0,1,3,4,6,7];
+    $('.clock').each(function(index, _){
+        $(this).attr('src', `./images/number${strTime[mapping[index]]}.png`);
+    });
+
+    // $('#hour2').attr('src', hourSrc2);
+    // $('#hour1').attr('src', hourSrc1);
+    // $('#hour2').attr('src', hourSrc2);
+    // $('#min1').attr('src', minSrc1);
+    // $('#min2').attr('src', minSrc2);
+    // $('#sec1').attr('src', secSrc1);
+    // $('#sec2').attr('src', secSrc2);
 }

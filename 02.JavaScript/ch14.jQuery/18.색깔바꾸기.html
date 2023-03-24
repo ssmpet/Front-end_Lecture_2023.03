@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 카운트다운</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <style>
+        .show {
+            width: 150px; height: 150px;
+            background-color: rgb(0,0,0);
+        }
+    </style>
+    <script>
+        function showBox() {
+
+            let colorR = $('#colorR').val();
+            let colorG = $('#colorG').val();
+            let colorB = $('#colorB').val();
+            let strColor = `rgb(${colorR},${colorG}, ${colorB})`
+
+            $('.show').css('backgroundColor', strColor);           
+
+            $('#valueRGB').html(`<b>RGB ( ${colorR},  ${colorG},  ${colorB} )</b>`);
+        }
+
+        function clickRGB() {
+            showBox();
+        }
+
+        $(document).ready(function() {
+            showBox();
+        });
+
+    </script>
+</head>
+<body>
+
+    <div class="container-fluid p-3 bg-primary text-white text-center"> 
+        <h1><strong>R G B 색깔 바꾸기</strong></h1>
+        <p>RGB 값 ==> 색</p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+        <table>
+            <tr style="text-align: center; border-bottom: 1;">
+                <th width="20%">RGB</th>
+                <th width="60%">입력 값</th>
+                <th width="20%">결과</th>
+            </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+            <tr>
+                <td style="color:red; text-align: center;">Red</td>
+                <td><input style="width:90%" onchange="clickRGB()" type="range" class="form-range" id="colorR" name="points" min="0" max="255" value="255"></td>
+                <td rowspan="3">
+                    <div class="show mt-2">
+                    </div>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td style="color:green; text-align: center;" >Green</td>
+                <td><input style="width:90%" onchange="clickRGB()" type="range" class="form-range" id="colorG" name="points" min="0" max="255" value="0"></td>
+                
+            </tr>
+            <tr>
+                <td style="color:blue; text-align: center;">Blue</td>
+                <td><input style="width:90%" onchange="clickRGB()" type="range" class="form-range" id="colorB" name="points" min="0" max="255"  value="0"></td>                        
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:center">
+                    <hr>
+                    <div>
+                        <h5 id="valueRGB">RGB(0, 0, 0)</h5>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+</body>
+</html>
