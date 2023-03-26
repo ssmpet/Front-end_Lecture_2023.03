@@ -14,7 +14,7 @@
         function disp(num) {
             $('<img></img>')
                 .attr('src', `./images/number${num}.png`)
-                .attr('width', 200)
+                .attr('width', 100)
                 .attr('id', 'second')
                 .css('margin', '40px')
                 .appendTo('#show');
@@ -24,7 +24,7 @@
             $('#second').remove();
         }
 
-        $(document).ready(function(){
+        function countdown() {
 
             disp(count--);
             let interval = setInterval(function(){
@@ -40,6 +40,34 @@
             setInterval(function(){
                 clearInterval(interval);
             }, 3100);
+
+        }
+
+        function result() {
+            
+            
+
+            
+
+        }
+
+        $(document).ready(function(){
+
+            
+            /* disp(count--);
+            let interval = setInterval(function(){
+                hide();
+                if( count != 0 ) disp(count--);
+                else {
+                    $('<h1></h1>')
+                        .html('결과는 5입니다')
+                        .appendTo('#show');
+                }
+            }, 1000);
+
+            setInterval(function(){
+                clearInterval(interval);
+            }, 3100); */
         });
 
     </script>
@@ -57,6 +85,7 @@
             <div class="col-10">
                 
                 <div class="text-center">
+                    <button onclick="result()">결과는</button>
                     <div id="show"></div>
                     <!-- <h1>결과는 5입니다.</h1> -->
                 </div>

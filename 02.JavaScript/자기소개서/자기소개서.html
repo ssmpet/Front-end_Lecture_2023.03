@@ -12,14 +12,67 @@
     <script src="https://kit.fontawesome.com/fbb7139956.js" crossorigin="anonymous"></script>
 
     <style>
-        * { font-family: 'Noto Sans KR', sans-serif;}
+        * { font-family: 'Noto Sans KR', sans-serif; }
         a { text-decoration:none;  }
+        p.foodscale{ width: 100%; overflow: hidden; }
+        p.foodscale img{ width: 100%; height: auto; transition: .8s; }
+        a:hover p.foodscale img{ transform: scale(1.2); }
     </style>
-
     <script>
-      
-       
+
+        function disp(num) {
+            $('<img></img>')
+                .attr('src', `./images/number${num}.png`)
+                .attr('width', 30)
+                .attr('id', 'second')
+                .appendTo('#result');
+        }
+
+        function hide() {
+            $('#second').remove();
+        }
+
+        
+        function lotto()  {
+
+            var count = 3;
+            $('#result').html("");
+
+            let numbers = [];
+            for(let i=0; i<45; i++) {
+                numbers.push(i+1);
+            }
+
+            for(let i=0; i<1000000; i++){
+                let r = parseInt(Math.ceil(Math.random() * 45))-1;
+                let temp = numbers[0];
+                numbers[0] = numbers[r];
+                numbers[r] = temp;
+            }
+
+            let strResult = '';
+            
+            for(let i=0; i<6; i++) 
+                strResult += `<span class="badge rounded-pill bg-primary">${numbers[i]}</span> `;
+            strResult += `  보너스  <span class="badge rounded-pill bg-primary">${numbers[6]}</span>`;
+
+            disp(count--);
+            let interval = setInterval(function(){
+                hide();
+                if( count != 0 ) disp(count--);
+                else {
+                    $('#result').html(strResult);
+                }
+            }, 1000);
+
+            setInterval(function(){
+                clearInterval(interval);
+            }, 3300);
+ 
+        }
+
     </script>
+    
     
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50" style="background-color: rgb(238, 248, 253);">
@@ -36,6 +89,7 @@
                     <li class="nav-item"><a href="#hobby" class="nav-link">취미</a></li>
                     <li class="nav-item"><a href="#travel" class="nav-link">여행</a></li>
                     <li class="nav-item"><a href="#food" class="nav-link">음식</a></li>
+                    <li class="nav-item"><a href="#fun" class="nav-link">쉬어가기</a></li>
                     <li class="nav-item"><a href="#connect" class="nav-link me-3">CONNECT</a></li>
                 </ul>
             </div>
@@ -260,9 +314,9 @@
                     <div class="card">
                         <div class="card-header">좋아하는 음식(냉 이)</div>
                         <div class="body">
-                            <img src="./images/purse.jpg" alt="냉이" width="100%">
+                            <a href="https://terms.naver.com/entry.naver?docId=4368464&cid=42776&categoryId=59916" alt="냉이" target="_blank"><p class="foodscale"><img src="./images/purse.jpg" alt="냉이" width="100%"></p></a>
                         </div>
-                        <div class="footer">
+                        <div class="footer p-3">
                             <br>
                             <b>효능 및 영양성분</b><br><br>
                             <p class="text-start">단백질과 비타민이 풍부한 알칼리성 작물로 특히 비타민 A, B1, C가 풍부해 원기를 돋우고, 피로 회복과 춘곤증에 좋다. 칼슘, 칼륨, 인, 철 등 무기질 성분도 다양하여 지혈과 산후출혈 등에 처방하는 약재로도 사용된다.
@@ -274,9 +328,9 @@
                     <div class="card">
                         <div class="card-header">자주 먹는 음식(미역국)</div>
                         <div class="body">
-                            <img src="./images/miyeokguk.jpg" alt="미역국" width="100%">
+                            <a href="https://terms.naver.com/entry.naver?docId=5707583&cid=43667&categoryId=43667" alt="미역국" target="_blank"><p class="foodscale"><img src="./images/miyeokguk.jpg" alt="미역국" width="100%"></p></a>
                         </div>
-                        <div class="footer">
+                        <div class="footer p-3">
                             <br>
                             <p>자주 해 먹는 음식 중 하나</p>
                         </div>
@@ -286,9 +340,9 @@
                     <div class="card">
                         <div class="card-header">버건디행궁(가곳 싶은 음식점)</div>
                         <div class="body">
-                            <a href="https://www.instagram.com/burgundy_bistro" target="_blank"><img src="./images/burgundy.jpg" alt="버건디행궁" width="100%"></a>
+                            <a href="https://www.instagram.com/burgundy_bistro" target="_blank"><p class="foodscale"><img src="./images/burgundy.jpg" alt="버건디행궁" width="100%"></p></a>
                         </div>
-                        <div class="footer">
+                        <div class="footer p-3">
                             <br>
                             <p class="text-start">Burgundy는 70년대 유럽의 모습에 영감을 받아
                                 실제 70년대 가구와 벽등, 소품을 사용하여
@@ -305,6 +359,21 @@
             </div>
         </div>
 
+    </div>
+
+    <div id="fun" class="container text-center">
+        <br><br><br><br><br><br>
+        <h2><strong>쉬어가기</strong></h2>
+        <br>
+        <h3>공부하며 만든 로또 예상 번호 알아내기</h3>
+        <br><br>
+        <div class="container">
+            <button onclick="lotto()" type="button" class="btn btn-primary mx-3">
+                눌러주세요.
+            </button>
+            <br><br><br>
+            <h3 id="result"></h3>
+        </div>
     </div>
 
     <div id="connect" class="container text-center">
