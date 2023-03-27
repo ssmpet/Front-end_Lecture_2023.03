@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼각함수</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+         
+        window.onload = function() {
+            const ctx = document.getElementById('myChart');
+            let xValues = [], sin = [], cos=[];
+            for (let i=0; i<630; i++){
+                xValues.push(i*0.01);
+                sin.push(Math.sin(i*0.01));
+                cos.push(Math.cos(i*0.01));
+            }
+
+            new Chart(ctx, {
+                type: 'line',    // 차트의 형태
+                data: {
+                    labels : xValues,
+                    datasets : [{
+                        label: 'Sine', 
+                        fill: false,
+                        pointRadius: 1, 
+                        lineTension: 0,
+                        backgroundColor: 'rgba(0, 0, 255, 1.0)',
+                        borderColor: 'rgba(0, 0, 255, 0.1)',
+                        data:sin
+                    }, {
+                        label: 'CoSine', 
+                        fill: false,
+                        pointRadius: 1, 
+                        lineTension: 0,
+                        backgroundColor: 'rgba(255, 0, 0, 1.0)',
+                        borderColor: 'rgba(255, 0, 0, 0.1)',
+                        data:cos
+                    }]
+                },
+
+                options:{
+                    scales: {
+                        yAxes:[{ticks:{min:-1, max:1}}] 
+                    },
+                    plugins: {
+                        legend: {display: true},
+                        title: {
+                            display: true,
+                            text : '사인, 코사인 그래프',
+                            padding : {top:10, bottom:20},
+                            font :{size:20}
+                        }
+                    }
+                }
+            });
+        } 
+    </script>
+</head>
+<body>
+
+    <div class="container-fluid p-3 bg-primary text-white text-center"> 
+        <h1><strong>My Bootstrap Page</strong></h1>
+        <p>삼각함수 - 사인, 코사인 그래프</p>                    
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <canvas id="myChart" width="100%"></canvas>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+</body>
+</html>
