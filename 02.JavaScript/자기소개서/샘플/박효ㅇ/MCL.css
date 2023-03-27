@@ -1,0 +1,83 @@
+/* 폰트 모음 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@font-face {
+    font-family: 'Cafe24ClassicType-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KOFIHDrLEEJWTTF-B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/KOFIHDrLEEJWTTF-B.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HBIOS-SYS';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/HBIOS-SYS.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 내용 관련 요소 */
+
+/* 바디 부분 스타일 */
+body {font-family: 'Nanum Gothic', sans-serif;
+    font-size: 18px;
+    background-color: rgb(255, 253, 239);
+    }
+
+/* Nav 바 */
+.navbar {background-color: rgba(16, 72, 16, 0.411);
+        }
+.nav-item {font-weight: bold;}
+
+/* 아무제목이나 포인트를 주고 싶은 제목 사용 시 */
+#anyT{ font-family: 'Cafe24ClassicType-Regular';
+        color:rgb(18, 38, 12);
+    }
+
+/* 중간급 제목 사용 시 */
+#midT{ font-family: 'KOFIHDrLEEJWTTF-B';;
+    color:rgb(30, 59, 21);
+}
+
+/* carousel 사진 사이즈 */
+.d-block {width:100%; 
+            height: 500px
+}
+
+/* 테이블 세팅 */
+#tableSet { 
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* 굵은 연녹선 */
+#hr2 {
+    border: 0;
+    height: 2px;
+    background: rgb(82, 104, 69);
+}
+
+/* 이미지가 하나인데 가운데로 하고싶을 때 */
+#cenImg {
+    display:block;
+    margin:auto;
+    width: 400px;
+    height: 400px;
+}
+
+/* 노랑색 노트 */
+#noteY {
+    background-color: rgba(255, 252, 192, 0.836); 
+    padding: 15px;
+}
+
+/* 시계 폰트 적용 */
+.DClock {
+    font-family: 'HBIOS-SYS';
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}

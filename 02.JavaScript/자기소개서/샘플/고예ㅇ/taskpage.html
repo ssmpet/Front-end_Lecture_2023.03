@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6suk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="TaskmyStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+
+  <body id="beige">
+    <!-- 
+      // 0. main
+    -->
+    <div class="main container-md">
+      <!--// 1. Header : Title, Nav-->
+      <header class="header title container-md p-3 fixed-top d-flex line" id="beige">
+        <!-- 타이틀 -->
+        <h1 class="display-5" style="margin-bottom: 0">
+          안녕하세요. <sapn style="font-weight: 700">고예ㅇ</sapn>입니다!
+        </h1>
+        <!-- 네비 -->
+        <ul class="nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Github</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://github.com/6suk">Github</a></li>
+              <li><a class="dropdown-item" href="https://github.com/6suk/TIL">TIL Page</a></li>
+              <li>
+                <a class="dropdown-item" href="https://github.com/6suk/FrontEndLecture/tree/master/00.MiniProject"
+                  >Project Page</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://6suk.notion.site/d8178c919339498ca4d8a80ef05734f2?v=d4a48a1db91a401295b8cd0fcf1e45e0"
+              >Notion</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://blog.naver.com/koandjo_">Blog</a>
+          </li>
+        </ul>
+      </header>
+      <!-- 1. Header : Title, Nav // -->
+
+      <!--// 2. Page : Intro, Post -->
+      <div class="page row">
+        <!-- // 인트로 -->
+        <div class="intro col-md-3 pe-md-5 mt-5">
+          <!-- intro : 프로필 이미지 -->
+          <div class="box row">
+            <img class="titleimg" id="showimg" src="./img/KakaoTalk_20221126_121736705.png" />
+            <img class="titleimg" id="hideimg" src="./img/KakaoTalk_20221126_1217367052.png" />
+          </div>
+          <!-- intro : 뱃지 + Line -->
+          <div class="introtxt my-3" style="text-align: center">
+            <span class="badge bg-info" id="beige">ESFJ</span>
+            <span class="badge bg-light">✏</span>
+            <span class="badge bg-light">Camping</span>
+            <span data-bs-toggle="tooltip" title="Click!">
+              <span class="bgtg badge bg-light" data-bs-toggle="collapse" data-bs-target="#catin" id="cat"
+                >😺😼 Click!</span
+              ></span
+            >
+            <div id="catin" class="row collapse">
+              <div class="col-md mb-3">
+                <div class="box"><img src="./img/IMG_9004-2.jpg" class="titleimg" /></div>
+                <b>고뚱이</b>, 7살
+              </div>
+              <div class="col-md mb-3">
+                <div class="box"><img src="./img/cat2.jpg" class="titleimg" /></div>
+                <b>식혜</b>, 2살
+              </div>
+            </div>
+          </div>
+          <div class="line"></div>
+          <!-- intro : 소개글 -->
+          <div class="introtxt row ms-3 my-3">
+            <ul>
+              <li>앞으로 구르고 뒤로 굴러도 <span class="badge bg-light">ESFJ</span></li>
+              <li>기록 <span class="badge bg-light">✏</span> 을 아마도 좋아하는 사람</li>
+              <li><span class="badge bg-light">Camping</span> 무진장 좋아하는 사람</li>
+              <li>두마리 애옹이<span class="badge bg-light" style="color: #333">😺😼</span>와 함께 살아요</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 인트로 // -->
+
+        <!-- // 포스트 -->
+        <div class="col-md ms-md-3">
+          <div class="post row">
+            <!-- 2022-12-04 추가 -->
+            <!-- //종강 D-day -->
+            <div class="col-lg">
+              <div class="jscard" id="card01">
+                <div class="cardtxt-info">
+                  <div class="cardtxt-desc">Timer</div>
+                  <div class="cardtxt-header pb-2">종강까지 남은 시간</div>
+                  <div class="cardtxt-timer">
+                    <div class="timer" id="beige">0</div>
+                    <div class="timer" id="beige">0</div>
+                    <div class="timertxt" id="beige">일</div>
+                  </div>
+                  <div class="cardtxt-timer">
+                    <div class="timer" id="beige">0</div>
+                    <div class="timer" id="beige">0</div>
+                    <div class="timertxt" id="beige">:</div>
+                    <div class="timer" id="beige">0</div>
+                    <div class="timer" id="beige">0</div>
+                    <div class="timertxt" id="beige">:</div>
+                    <div class="timer" id="beige">0</div>
+                    <div class="timer" id="beige">0</div>
+                  </div>
+                </div>
+                <img class="clock" src="./img/clock1.png" id="on" />
+                <img class="clock" src="./img/clock2.png" id="hide" />
+                <img class="clock" src="./img/clock3.png" id="hide" />
+                <img class="clock" src="./img/clock4.png" id="hide" />
+              </div>
+            </div>
+            <!-- 종강 D-day// -->
+            <!-- //테마 변경 -->
+            <div class="col-lg">
+              <div class="jscard" id="card02" onclick="changeBg()">
+                <div class="cardtxt-info">
+                  <div class="cardtxt-desc">Change Color</div>
+                  <div class="cardtxt-header">이 카드를<br />클릭해 보세요!</div>
+                  <div style="width: 100%">
+                    <div class="cardtxt"><b>Purple</b> 테마로 변경되었습니다.</div>
+                    <div class="cardtxt"><b>Beige</b> 테마로 변경되었습니다.</div>
+                  </div>
+                </div>
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+              </div>
+            </div>
+            <!-- 테마 변경// -->
+            <!-- //모바일 버전 -->
+            <div class="col-lg">
+              <div class="jscard" id="card03" onclick="mWindow(390)">
+                <div class="cardtxt-info">
+                  <div class="cardtxt-desc" id="mview">Mobile View</div>
+                  <div class="cardtxt-header" id="mview">모바일 버전 보기</div>
+                  <div style="width: 100%">
+                    <div class="cardtxt"><b>Purple</b> 테마로 변경되었습니다.</div>
+                    <div class="cardtxt"><b>Beige</b> 테마로 변경되었습니다.</div>
+                  </div>
+                </div>
+                <img src="./img/mVer.png" class="mVer" />
+              </div>
+            </div>
+          </div>
+          <!-- // column1 -->
+          <div class="post row">
+            <h4 class="mb-3" style="font-weight: 800" id="camping">🛤 Camping Lover</h4>
+            <div class="desc col-lg">
+              <!-- // row1 -->
+              <div class="descbox">
+                <img src="./img/IMG_7111.jfif" id="descimg" /><a
+                  href="https://blog.naver.com/koandjo_/222900439584"
+                  class="btn"
+                  id="beige"
+                  >Post View Now</a
+                >
+              </div>
+              <h5>구시포 노을 캠핑장</h5>
+              <p>구시포 해수욕장과 노을이 아름다웠던<br />6번째 캠핑장, 구시포 노을</p>
+              <p>
+                <span class="badge bg-light">with. 코베아 고스트 플러스</span>
+                <span class="badge bg-info" id="beige">Blog</span>
+              </p>
+            </div>
+
+            <!-- // row2 -->
+            <div class="desc col-lg">
+              <div class="descbox">
+                <img src="./img/IMG_6727.jpg" id="descimg" /><a
+                  href="https://blog.naver.com/koandjo_/222885927703"
+                  class="btn"
+                  id="beige"
+                  >Post View Now</a
+                >
+              </div>
+              <h5>구례 섬지 캠핑장</h5>
+              <p>숲에서 힐링 제대로 하고 온<br />5번째 캠핑장, 구례 섬지</p>
+              <p>
+                <span class="badge bg-light">with. 제드 와일드돔 EX</span>
+                <span class="badge bg-info" id="beige">Blog</span>
+              </p>
+            </div>
+
+            <!-- // row3 -->
+            <div class="desc col-lg">
+              <div class="descbox">
+                <img src="./img/IMG_6357.jpg" id="descimg" />
+                <a href="https://blog.naver.com/koandjo_/222876957435" class="btn" id="beige">Post View Now</a>
+              </div>
+              <h5>고흥 해그라미 캠핑장</h5>
+              <p>고양이 친구들이 반겨주는<br />4번째 캠핑장, 고흥 해그라미</p>
+              <p>
+                <span class="badge bg-light">with. 제드 와일드돔 EX</span>
+                <span class="badge bg-info" id="beige">Blog</span>
+              </p>
+            </div>
+          </div>
+          <!-- column1 //-->
+
+          <!-- // column2 -->
+          <div class="post row">
+            <h4 class="mb-3" style="font-weight: 800" id="overseasTrip">✈ Overseas Trip</h4>
+            <!-- // row1 -->
+            <div class="desc col-lg">
+              <div class="descbox">
+                <img src="./img/GR003863.JPG" id="descimg" />
+                <div class="txt"><img src="./img/1f1fb-1f1f3.png" /><br />Vietnam Da Nang</div>
+              </div>
+              <h5>Da Nang</h5>
+              <p>음식도 분위기도 날씨도 모두 완벽했던<br />엄마와 함께 떠난 베트남 다낭</p>
+              <p>
+                <span class="badge bg-light">엄마와 함께</span> <span class="badge bg-info" id="beige">Da Nang</span>
+              </p>
+            </div>
+
+            <!-- // row2 -->
+            <div class="desc col-lg">
+              <div class="descbox">
+                <img src="./img/IMG_6597_2.JPG" id="descimg" />
+                <div class="txt"><img src="./img/1f1e8-1f1f3.png" /><br />China Shanghai</div>
+              </div>
+              <h5>Shanghai</h5>
+              <p>여럿이라 두배로 즐거웠던<br />대학 동기들과 함께 떠난 상하이</p>
+              <p>
+                <span class="badge bg-light">동기들과 함께</span> <span class="badge bg-info" id="beige">Shanghai</span>
+              </p>
+            </div>
+
+            <!-- // row3 -->
+            <div class="desc col-lg">
+              <div class="descbox">
+                <img src="./img/KakaoTalk_20221128_182249064.jpg" id="descimg" />
+                <div class="txt"><img src="./img/1f1ed-1f1f0.png" /><br />Hong Kong</div>
+              </div>
+              <h5>Hong Kong & Macau</h5>
+              <p>하루하루가 너무 아쉬웠던<br />찐친들과의 여행, 홍콩과 마카오</p>
+              <p>
+                <span class="badge bg-light">찐친들과 함께</span>
+                <span class="badge bg-info" id="beige">Hong Kong & Macau</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 포스트 // -->
+      </div>
+      <!--2. Page : Intro, Post // -->
+
+      <!-- // 3. footer -->
+      <footer class="p-3">ⓒ 2022. 6suk all rights reserved.</footer>
+      <!-- 3. footer // -->
+    </div>
+    <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+    <script src="./TaskJS.js"></script>
+  </body>
+</html>
