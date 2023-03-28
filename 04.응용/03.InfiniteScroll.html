@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한 스크롤</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const appendDocument = function() {
+                for (let i=0; i<20; i++) 
+                    $('<h1></h1>').text('Infinite Scroll').appendTo('body');
+            }
+
+            appendDocument();   // 초기화
+
+            // 이벤트 연결
+            $(window).scroll(function() {
+                let scrollHeight = $(window).scrollTop() + $(window).height();
+                let documentHeight = $(document).height();
+                if (scrollHeight == documentHeight)
+                    appendDocument();
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

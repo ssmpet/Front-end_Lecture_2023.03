@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame Animation</title>
+    <script>
+        window.onload = function() {
+            let frames = [
+                './human/0.png', './human/1.png', './human/2.png', './human/3.png', 
+                './human/4.png', './human/5.png', './human/6.png', './human/7.png', 
+                './human/8.png', './human/9.png', './human/10.png', './human/11.png', 
+                './human/12.png', './human/13.png', './human/14.png'
+            ];
+            let img = document.getElementById('image');
+            let count = 0;
+            setInterval(function(){
+                img.src = frames[count++ % frames.length];
+            }, 1000/30);    // 30 fps(frames/30)
+        }
+    </script>
+</head>
+<body style="margin:40px">
+    <img id="image">
+</body>
+</html>

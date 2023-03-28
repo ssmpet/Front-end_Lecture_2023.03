@@ -77,10 +77,29 @@
             setInterval(function(){
                 clearInterval(interval);
             }, 3300);
-
+ 
         }
 
-       
+        function clockChange(){
+
+            let frames = [
+                './images/0.jpg', './images/1.jpg', './images/2.jpg', './images/3.jpg', 
+                './images/4.jpg', './images/5.jpg', './images/6.jpg', './images/7.jpg', 
+                './images/8.jpg', './images/9.jpg', './images/10.jpg', './images/11.jpg'
+            ];
+
+            let img = $('#myface');
+            let cnt = 0;
+            setInterval(function(){
+                img.attr('src', frames[cnt++ % frames.length]);
+            }, 1000); 
+        }
+        
+        $(document).ready(function(){
+
+            
+        });
+
     </script>
     
     
@@ -107,12 +126,12 @@
         </div>
     </nav>
  
-    <!-- <div id="about" class="container-fluid text-center text-white" style="background-color: #ffc107; background-image: url('./images/0.jpg');  background-size:50%; background-repeat: no-repeat;" > -->
+    <!-- <div id="about" class="container-fluid text-center text-white" style="background-color: #ffc107; background-image: url('./images/mandala.png');  background-size:100%; background-repeat: no-repeat; rotate(-25);" > -->
     <div id="about" class="container-fluid text-center" style="background-color: #ffc107;" >
         <h3 style="margin-top:50px;"> </h3>
         <br>
         <h2>HWAYOUNG KIM'S 자기소개서</h2>
-        <img src="./images/myface.jpg" class="mx-auto mt-3 img-fluid rounded-circle" alt="KimHwaYoung" width="250" height="250">
+        <img id="myface" src="./images/myface.jpg" class="mx-auto mt-3 img-fluid rounded-circle" alt="KimHwaYoung" width="250" height="250">
         <br><br>
         <h4>안녕하세요. developer로 공부중인 김화영입니다.<br>
         제 자기소개서 페이지에 오신걸 환영합니다.<br><br>
