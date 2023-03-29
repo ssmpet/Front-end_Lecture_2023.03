@@ -46,7 +46,7 @@ console.log('둘레 : ', 2*pi*radius);
 console.log('면적 : ', pi * radius**2);
 console.log(`면적 : ${pi * radius**2}`);
 
-let a = 1;
+a = 1;
 a += 2;     // a = a + 2
 console.log(a);
 
@@ -61,7 +61,8 @@ str += ' ' + 'jumps over the lazy dog';
 console.log(str);
 
 // 3. 증감 연산자
-let x=0, y=0;
+x=0;
+let y=0;
 console.log(x++, ++y);  // post-increment, pre-increment
 console.log(x, y);
 console.log(x--, --y);  // post-decrement, pre-decrement
