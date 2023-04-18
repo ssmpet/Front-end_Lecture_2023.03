@@ -29,4 +29,13 @@ $(function() {
         .siblings('h2').removeClass('on');
     });
 
+    // 레이어 팝업
+    $('.layerPopup').on('click', function(e){
+                            e.preventDefault();
+                            $('#popup').fadeIn();
+    });
+    $('.close').on('click', function(){
+                            $('#popup').fadeOut();
+    });
+
 });
