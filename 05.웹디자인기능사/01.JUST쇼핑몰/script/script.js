@@ -1,7 +1,7 @@
 $(function() {
 
     // 그룹 메뉴
-    $('nav>ul>li').mouseenter(function(){
+    $('nav>ul>li').mouseover(function(){
         $('ul.submenu').stop().slideDown(400);
     });
     $('nav>ul>li').mouseleave(function(){

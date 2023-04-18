@@ -7,7 +7,7 @@ ul, li{ margin: 0; padding: 0;  list-style: none;}
 a { text-decoration:none;  color: #333333;} 
 body{
     background: #ffffff;
-    color: #222328;
+    color: #333333;
 }
 .blind {position:fixed; top:-900px;}
 
@@ -102,10 +102,10 @@ body{
 #wrap #center .con .con1 .box ul.gallery li a:hover{opacity: 0.5;}
 
 /* 배너 */
-#wrap #center .con .con2 {background: #ffffff;}
+#wrap #center .con .con2 { background: #ffffff;}
 
 /* 바로가기 */
-#wrap #center .con .con3 {background: #ffffff;}
+#wrap #center .con .con3 { background: #ffffff;}
 #wrap #center .con .con2 img:hover,
 #wrap #center .con .con3 img:hover{opacity:0.7;}
 
@@ -121,10 +121,10 @@ body{
 #wrap footer .blogo {width: 200px;}
 #wrap footer .blogo img { margin-top: 30px;}
 #wrap footer .blogo img:hover {opacity: 0.7;}
-#wrap footer .copyright {width: 800px;}
+#wrap footer .copyright {width: 850px;}
 #wrap footer .copyright p { margin-top: 35px; text-align: center;}
 
-#wrap footer .sns {width: 200px;}
+#wrap footer .sns {width: 150px;}
 #wrap footer .sns ul { 
         display: flex; justify-content: space-between; margin-top: 30px;
 }
