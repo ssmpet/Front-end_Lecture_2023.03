@@ -4,12 +4,14 @@
 *{  margin: 0; padding: 0;}
 
 ul, li{ margin: 0; padding: 0;  list-style: none;}
-a { text-decoration:none;  color: #333333;} 
+a { 
+        text-decoration:none;  
+        color: #333333;} 
 body{
     background: #ffffff;
     color: #333333;
 }
-.blind {position:fixed; top:-900px;}
+/* .blind {position:fixed; top:-900px;} */
 
 #wrap {width: 1200px; margin: 0 auto;}
 
@@ -29,7 +31,7 @@ body{
 #wrap header .menu nav>ul>li {float: left;}
 #wrap header .menu nav>ul>li>a {display: block; width: 200px; height: 50px;
         line-height: 50px; text-align: center;
-        background: #fffff;
+        background: #ffffff;
         /* color: #ffffff;  */
         font-weight: bold;}
 #wrap header .menu nav>ul>li>a:hover { background: #fac7ec;}
@@ -70,7 +72,7 @@ body{
         padding: 0 30px; height: 25px; 
         line-height: 25px; cursor: pointer;
         border-top-left-radius: 5px;
-        border-top-right-radius: 5p;
+        border-top-right-radius: 5px;
 }
 #wrap #center .con .con1 .box h2.on{
         background: #fac7ec; margin-top:10px;
@@ -86,7 +88,8 @@ body{
         height: 28px; line-height: 28px; border-bottom: 1px dashed #ccc;
 }
 #wrap #center .con .con1 .box ul.notice li a{
-        text-decoration: none; font-size: 14px; padding: 0 10px; }
+        /* text-decoration: none; */
+        font-size: 14px; padding: 0 10px; }
 #wrap #center .con .con1 .box ul.notice li a:hover{color:#fac7ec;}
 #wrap #center .con .con1 .box ul.notice li span{
         float: right; font-size: 12px; padding:0 10px; color: #999;
