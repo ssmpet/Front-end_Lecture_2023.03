@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* reset */
+*{margin: 0; padding: 0;}
+ul,li{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none; color: #333333;}
+body {background:#fff;}
+
+#wrap {width: 1200px; margin: 0 auto;}
+
+/* ========================================
+	header 
+======================================== */  
+#wrap header {width: 1200px; height: 100px; background: #01320e;}
+#wrap header .logo {width: 200px; height: 100px;  float: left;}
+#wrap header .logo img {margin-top:30px;}
+#wrap header .logo img:hover {opacity:0.7;}
+/* menu */
+#wrap header .menu{
+	width: 1000px; height: 100px; 
+	float: left; 
+	position: relative;
+}
+#wrap header .menu nav{
+	width: 80%; position: absolute; 
+	text-align: center; 
+	right: 0; top: 50px; 
+	z-index: 999; 	
+}
+#wrap header .menu nav ul li{
+	float: left; width: 25%; position: relative;}
+#wrap header .menu nav ul li a{
+	display: block; height: 50px; 
+	line-height: 50px; 
+	color: #fff;
+}
+/* #wrap header .menu nav>ul>li>a{background: #000000;}  */
+#wrap header .menu nav ul li a:hover{background: #3c8447;}
+/* subMenu */
+#wrap header .menu nav ul li ul{display: none;}
+#wrap header .menu nav ul li ul li{width: 100%;}
+/* subMenu - bg */
+#wrap header .background{
+	width: 1200px; height: 150px; 
+	background: #0e7b1f; 
+	z-index: 9;
+ 	position: absolute; 
+	left: -200px; top: 100px; 
+	display: none;}
+
+ 
+/* ========================================
+		contents
+======================================== */
+#wrap #center {width: 1200px; height: 500px;}
+/* left-slider */
+#wrap #center .slider {
+	width: 1200px; height: 300px; 
+	clear:both;  float:left;  
+	position: relative; 
+	overflow: hidden; 
+	/* background: rgb(121, 120, 120); */
+}
+#wrap #center .slider>div {position: absolute; top:0; left:0;}
+#wrap #center .slider>div img {display: block;}
+#wrap #center .slider .sliderList {width: 3600px;}
+#wrap #center .slider .sliderList .sliderImg {float:left;}
+/* notice */
+#wrap #center .con div {float: left; width: 400px; height: 200px;}
+#wrap #center .con .con1 {background: #fff;}
+#wrap #center .con .con1 h2 {
+	/* color: #000;  */
+	padding:10px 0 0 7px; }
+#wrap #center .con .con1 ul {padding:7px;font-size:15px;}
+#wrap #center .con .con1 ul li {
+	height:25px; border-bottom: 1px dotted #999; line-height:25px;} 
+/* #wrap #center .con .con1 ul li a {color:#333;}  */
+#wrap #center .con .con1 ul li a:hover {
+	color:#D01218; 
+	text-decoration: underline;} 
+#wrap #center .con .con1 ul li span {
+	float:right; color:#999; font-size:14px;}
+
+/* gallery */
+#wrap #center .con .con2 {background: #ddd;}
+#wrap #center .con .con2 h2 {color: #000; padding:10px 0 0 7px; }
+#wrap #center .con .con2 ul{
+	display:flex; 
+	justify-content:space-evenly;
+	margin-top:10px; }
+#wrap #center .con .con2 ul li:hover{opacity:0.7;}
+/* banner */
+#wrap #center .con .con3 {background: rgb(215, 215, 215);}
+#wrap #center .con .con3 img:hover{opacity:0.7;}
+
+/* footer */
+#wrap footer {
+	width: 1200px; height: 100px; clear: both;
+	border-top:2px solid #000; 
+	border-bottom:2px solid #000;
+	box-sizing: border-box;
+	font-size:13px;
+}
+#wrap footer div { float: left; height: 100px;}
+#wrap footer .blogo { width: 200px;}
+#wrap footer .blogo img {margin-top: 35px;}
+#wrap footer .blogo img:hover {opacity: 0.7;}
+#wrap footer .copyright { width:800px;}
+#wrap footer .copyright p{ margin-top: 35px; text-align:center;}
+#wrap footer .family {width: 200px;}
+#wrap footer .family select {
+	width: 150px; height: 30px;
+	text-align: center;
+	margin-top: 35px; 
+	background: #ddd; float:right;
+}
+
+/* popup */
+#popup {
+	width: 400px; height: 300px;
+	border: 3px solid #5b9bd5;
+	background: #f2f2f2; 
+	display: none;
+	position: absolute;
+	top: 300px; left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 999999;
+}
+
+#popup h4{
+	font-size: 17px; 
+	width: 400px; height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: #5b9bd5; 
+	color: #ffffff
+}
+
+#popup .close {
+	background: #5b9bd5;
+	color: #ffffff;
+	font-size: 13px;
+	padding: 7px 11px; 
+	text-align: center;
+	border-radius: 5px;
+	position: absolute;
+	right: 10px;
+	bottom: 10px; 
+	cursor: pointer;
+}
+#popup .close:hover { background:#267bcb;}
+#popup .text { 
+	text-align: center;
+	font-size: 14px;
+	padding-top: 20px;
+}
+#popup .text p {font-size: 25px;}
