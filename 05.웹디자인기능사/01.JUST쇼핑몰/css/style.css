@@ -137,7 +137,7 @@ body{
 /* popup */
 #popup {
         width: 400px; height: 300px;
-        /* border: 3px solid #5b9bd5;  */
+        border: 3px solid #fac7ec; 
         background: #f2f2f2;
         display: none; 
         position: absolute;
@@ -159,6 +159,6 @@ body{
         right: 10px; bottom: 10px; 
         cursor: pointer;
 }
-#popup .close:hover { background: #333333;}
+#popup .close:hover { background: #717070;}
 #popup .text { text-align:center; font-size: 14px; padding-top: 20px;}
 #popup .text p {font-size: 25px;}

@@ -10,13 +10,13 @@ $(function(){
 
     // slider 메뉴
     $('.sliderImg:gt(0)').hide();
-    // var x = 0;
+    
     setInterval(function(){
 
-        // var next = (x + 1) %3;
+        
         $('.sliderImg:first').fadeOut(1500).next().fadeIn(1500);
         $('.sliderImg:first').appendTo('.sliderList');
-        x = next;
+    
     }, 3000);
 
     // 텝메뉴
