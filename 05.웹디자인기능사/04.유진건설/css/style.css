@@ -26,8 +26,8 @@ header .menu nav ul li a{
         height: 50px; line-height: 50px;
         color: #ffffff;
 }
-header .menu nav>ul>li>a {background: #000;}
-header .menu nav ul li a:hover{background: #666;}
+header .menu nav>ul>li>a {background: #666;}
+header .menu nav ul li a:hover{background: #b8b5b5;}
 
 /* submenu */
 header .menu nav ul li ul { display: none;}
@@ -36,7 +36,7 @@ header .menu nav ul li ul li {width: 100%;}
 /* submenu - bg */
 header .background { 
     width: 1200px; height: 150px;
-    background: #000;
+    background: #666;
     z-index : 9;
     position: absolute;
     left: -200px;
@@ -151,7 +151,7 @@ footer .family select{
     color: #fff;
 }
 #popup .close {
-    background: #ff5050;
+    background: #5b9bd5;
     font-size: 13px;
     padding: 7px 11px;
     text-align: center;
@@ -162,7 +162,7 @@ footer .family select{
     bottom: 10px;
     cursor: pointer;
 }
-#popup .close:hover { background: #6e2d2d;}
+#popup .close:hover { background: #26445f;}
 #popup .text{ text-align: center; font-size: 14px; padding-top: 20px;}
 #popup .text p { font-size: 25px;}
 
