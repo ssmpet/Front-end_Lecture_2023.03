@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+*{ margin: 0; padding: 0;}
+ul, li { margin: 0; padding: 0; list-style: none;}
+a { text-decoration: none; color: #333333;}
+body { background: #fff;}
+
+#wrap { width: 1200px; margin: 0 auto; }
+
+/* header */
+header {
+    width: 1200px;
+    height: 100px;
+    position: relative;
+}
+
+header .logo {
+    width: 200px;
+    height: 100px;
+    float: left;
+    }
+
+header .logo img { margin-top: 30px;}
+header .logo img:hover { opacity: 0.7;}
+
+/* menu */
+header .menu {
+    width: 1000px;
+    height: 100px;
+    float: left;
+    position: relative;
+    }
+
+header .menu nav {
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: #0076be;
+    z-index: 999;
+    }
+
+header .menu nav>ul>li {
+    width: 200px;
+    height: 50px;
+    float: left;
+    }
+
+header .menu nav>ul>li>a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #0076be;
+    color: #fff;
+    font-weight: bold;
+    }
+
+header .menu nav>ul>li>a:hover { background: #05619b;}
+header .menu nav>ul>li>a:focus { background: #308cc5;}
+
+header .menu nav .submenu {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background: #0994eb;
+    display: none;
+    }
+header .menu nav .submenu li { height: 50px;}
+header .menu nav .submenu li a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #0994eb;
+    color: #fff;
+    }
+header .menu nav .submenu li a:hover { background: #05619b;}
+header .menu nav .submenu li a:focus { background: #308cc5;}
+
+#center { width: 1200px; height: 500px;}
+
+#center .slider {
+    width: 1200px;
+    height: 300px;
+    clear: both;
+    z-index: 99;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+#center .slider>div {
+    position: absolute;
+    top: 0; 
+    left: 0;
+}
+#center .slider>div img { display: block; }
+#center .slider .sliderList { width: 3600px;}
+#center .slider .sliderList .sliderImg { float: left;}
+
+
+.con div {float: left; width: 400px; height: 200px;}
+
+/* 공지사항 */
+.con .con1 { position: relative;}
+.con .con1 .box h2{
+    margin-top: 10px;
+    float: left;
+    font-size: 14px;
+    padding: 0 30px;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.con .con1 .box h2.on {
+    background: #0066ad;
+    color: #fff;
+    margin-top: 10px;
+}
+.con .con1 .box ul {
+    display: none;
+    width: 400px;
+    background: #fff;
+    padding-top: 15px;
+    border-top: 1px solid #0066ad;
+    position: absolute;
+    top: 35px;
+}
+.con .con1 .box h2.on+ul { display: block; }
+.con .con1 .box ul.notice li {
+    height: 28px;
+    line-height: 28px;
+    border-bottom: 1px dashed #ccc;
+}
+.con .con1 .box ul.notice li a{
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0 5px;
+}
+.con .con1 .box ul.notice li a:hover { color: #0066ad;}
+.con .con1 .box ul.notice li span{
+    float: right;
+    font-size: 12px;
+    padding: 0 10px;
+    color: #999;
+}
+
+/* 갤러리 */
+.con .con1 .box h2.gy { margin-top: 10px;}
+.con .con1 .box ul.gallery {
+    margin-top: 0;
+    padding-top: 15px;
+    position: absolute;
+    top: 35px;
+}
+.con .con1 .box ul.gallery li img { width: 120px; height: 135px;}
+.con .con1 .box ul.gallery li {float: left; margin-left: 10px;}
+.con .con1 .box ul.gallery li a:hover { opacity: 0.5;}
+
+.con .con2 img:hover,
+.con .con3 img:hover { opacity: 0.7;}
+
+footer {
+    width: 1200px;
+    height: 100px;
+    clear: both;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+.footer {float: left;}
+.blogo {
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+.blogo img { margin-top: 30px;}
+.blogo img:hover {opacity: 0.7;}
+
+.footer .bmenu {
+    width: 1000px;
+    height: 50px;
+}
+.footer .bmenu ul {margin-left: 150px;}
+.footer .bmenu ul li {float: left; margin: 15px 50px 0 50px;}
+.footer .bmenu ul li a{color: #333;}
+.footer .bmenu ul li a:hover {color: #999;}
+.footer .copyright {
+    width: 1000px;
+    height: 50px;
+    border-top: 1px dotted #999;
+    box-sizing: border-box;
+}
+.footer .copyright p {
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* popup */
+#popup {
+    width: 400px;
+    height: 300px;
+    border: 3px solid #5b9bd5;
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+#popup h3 {
+    font-size: 17px;
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #5b9bd5;
+    color: #fff;
+}
+#popup .close{
+    background: #0076be;
+    font-size: 13px;
+    padding: 7px 11px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+#popup .close:hover {background: #05619b;}
+#popup .text {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px;
+}
+#popup .text p {font-size: 25px;}

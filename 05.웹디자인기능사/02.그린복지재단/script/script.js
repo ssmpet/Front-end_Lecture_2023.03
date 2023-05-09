@@ -8,7 +8,7 @@ $(function() {
         $('.submenu, .background').stop().slideUp();
     });
 
-    // 위아래슬라이딩
+    // 좌우슬라이딩
     // let x = 0;
     setInterval (function(){
         // if (x < 2)  x++;
