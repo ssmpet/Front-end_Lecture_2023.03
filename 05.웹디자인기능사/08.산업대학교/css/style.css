@@ -102,11 +102,11 @@ footer .footer .copyright {
     box-sizing: border-box;
 }
 footer .footer .copyright p {padding-top: 10px; text-align: center;}
-footer .footer .family { width: 200px; height: 100px; float: left;}
-footer .footer .family select {
+footer .family { width: 200px; height: 100px; float: left;}
+footer .family select {
     width: 150px; height: 30px; 
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
     float: right;
     background: #ddd;   
 }
