@@ -6,3 +6,121 @@ a {text-decoration: none; color: #333333;}
 body {background: #ffffff;}
 
 #wrap { width: 1200px; margin: 0 auto;}
+
+/* header */
+header {width: 1200px; height: 100px; position: relative;}
+header .logo {width: 200px; height: 100px; float: left;}
+/* header .logo img {margin-top: 30px;} */
+header .logo img:hover {opacity: 0.7;}
+
+/* menu  */
+header .menu { width: 1000px; height: 100px; float: left;}
+header .menu nav {
+    width: 800px; height: 50px; 
+    background: #0d0df1; 
+    position: absolute;
+    right: 0; 
+    top: 25px;
+    z-index: 999;
+}
+
+header .menu nav li {background: #030357;}
+header .menu nav>ul>li {
+    float: left;
+    width: 25%; height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+header .menu nav ul>li:hover ul{height: auto;}
+header .menu nav a {display: block; color: #fff; font-size: 15px;}
+header .menu nav ul li a:hover {background: #CAAC7D;}
+header .menu nav>ul>li>ul {width: 200px; height: 0; overflow: hidden;}
+
+/* content */
+#center { width: 1200px; height: 500px;}
+
+#center .slider { 
+    width: 1200px; height: 300px;
+    clear: both; float: left;
+    position: relative;
+    overflow: hidden;
+    background: gray;
+}
+#center .slider>div {position: absolute; top: 0; left: 0;}
+#center .slider>div img {display: block;}
+
+/* notice + banner */
+#center .con div {float: left; width: 400px; height: 200px;}
+#center .con .con1 {background: #fff;}
+#center .con .con1 h2 {color: #000; padding: 10px 0 0 7px;}
+#center .con .con1 ul {padding: 7px; font-size: 15px;}
+#center .con .con1 ul li { height: 25px; border-bottom: 1px dotted #999; line-height: 25px;}
+#center .con .con1 ul li a {color: #333;}
+#center .con .con1 ul li a:hover{color: red; text-decoration: underline;}
+#center .con .con1 ul li span {float: right; color: #999; font-size: 14px;} 
+
+/* gallery */
+#center .con .con2 {background: #ddd;}
+#center .con .con2 h2 {color: #000; padding: 10px 0 0 7px;}
+#center .con .con2 ul {display: flex; justify-content: space-evenly; margin-top: 10px;}
+#center .con .con2 ul li:hover{opacity: 0.7;}
+
+#center .con .con3 img:hover{opacity: 0.7;}
+
+/* footer */
+footer { 
+    width: 1200px; height: 100px;
+    clear: both;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+footer div { float: left; height: 100px;}
+footer .blogo {width: 200px;}
+footer .blogo img{margin-top: 35px;}
+footer .blogo img:hover {opacity: 0.7;}
+footer .copyright { width: 880px;}
+footer .copyright p {margin-top: 35px; text-align: center;}
+footer .sns {width: 120px;}
+footer .sns ul {display: flex; justify-content: space-between; margin-top: 30px;}
+footer .sns ul li img {width: 30px; height: 30px;}
+footer .sns ul li img:hover{opacity: 0.7;}
+
+/* popup */
+#popup {
+    width: 400px; height: 300px;
+    border: 3px solid #5b9bd5;
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+#popup h3 {
+    font-size: 17px; 
+    width: 400px; height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #5b9bd5;
+    color: #fff;
+}   
+
+#popup .close {
+    background: #ff5050;
+    font-size: 13px;
+    padding: 7px 11px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+#popup .close:hover {background: #6e2d2d;}
+#popup .text{ text-align: center; font-size: 14px; padding-top: 20px;}
+#popup .text p{ font-size: 25px;}
