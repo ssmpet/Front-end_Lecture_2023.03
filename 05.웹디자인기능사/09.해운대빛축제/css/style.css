@@ -1,0 +1,83 @@
+@charset  "UTF-8";
+
+* { margin: 0; padding: 0;}
+ul, li { margin: 0; padding: 0; list-style: none;}
+a {text-decoration: none; color: #333333;}
+body {background: #fff;}
+
+#wrap {width: 1000px; margin: 0; position: relative;}
+
+/* hearder */
+header {width: 200px; height: 650px; float: left;}
+header .logo {width: 200px; height: 100px;}
+header .logo img { margin-top: 30px;}
+header .logo img:hover {opacity: 0.7;}
+header .menu {width: 200px; height: 550px; background: #999;}
+header .menu .accordion-menu {width: 100%; height: auto;}
+header .menu .accordion-menu>ul>li {width: 100%;}
+header .menu .accordion-menu>ul>li>a {  
+    display: block; height: 50px; line-height: 50px;
+    background: #666; color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 20px;
+    border-bottom: 1px solid #555;
+    box-sizing: border-box;
+}
+
+header .menu .accordion-menu>ul>li>a:hover {color: #333; background: #d3cfcf;}
+header .menu .accordion-menu .submenu {width: 100%; height: auto; display: none;}
+header .menu .accordion-menu .submenu>li>a { 
+    height: 50px; line-height: 50px;
+    background: #aaa;
+    color: #fff;
+    padding: 0 40px;
+    font-size: 14px;
+    display: block;
+}
+header .menu .accordion-menu .submenu>li>a:hover {color: #333; background: #ddd;}
+
+
+#center {width: 800px; height: 650px; float: left;}
+
+#center .slider {
+    width: 800px; height: 350px; position: relative;
+    overflow: hidden;
+    background: #ddd;
+}
+#center .slide .slideList {position: absolute; top: 0; left: 0;}
+#center .slide img {display: block;}
+
+/* 공지사항 */
+#center .con1 { float: left; width: 267px; height: 200px;}
+#center .con1 .box {position: relative;}
+#center .con1 .box h2{
+    margin-top: 10px;
+    margin-left: 8px;
+    float: left;
+    font-size: 14px;
+    padding: 0 30px;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #666;
+}
+#center .con1 .box h2.on { background: #0066ad; color: #fff; margin-top: 10px;}
+#center .con1 .box ul { 
+    display: none;
+    width: 267px;
+    background: #fff;
+    padding-top: 15px;
+    border-top: 1px solid #0066ad;
+    position: absolute;
+    top: 35px;
+}
+#center .con1 .box h2.on+ul {display: block;}
+#center .con1 .box ul.notice li {
+    height: 28px; line-height: 28px;
+    border-bottom: 1px dashed #ccc;
+}
+#center .con1 .box 
+
