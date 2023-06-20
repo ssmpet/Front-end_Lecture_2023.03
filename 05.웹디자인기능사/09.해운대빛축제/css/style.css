@@ -47,6 +47,8 @@ header .menu .accordion-menu .submenu>li>a:hover {color: #333; background: #ddd;
 }
 #center .slide .slideList {position: absolute; top: 0; left: 0;}
 #center .slide img {display: block;}
+#center .sliderImg p{position:absolute; right:0; bottom:0; background: rgb(139, 173, 245); padding:10px;}
+
 
 /* 공지사항 */
 #center .con1 { float: left; width: 267px; height: 200px;}
@@ -79,5 +81,90 @@ header .menu .accordion-menu .submenu>li>a:hover {color: #333; background: #ddd;
     height: 28px; line-height: 28px;
     border-bottom: 1px dashed #ccc;
 }
-#center .con1 .box 
+#center .con1 .box ul.notice li a{
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 0 10px;
+}
+#center .con1 .box ul.notice li a:hover {color: #0066ad;}
+#center .con1 .box ul.notice li span {
+    float: right;
+    font-size: 12px;
+    padding: 0 10px;
+    color: #999;
+}
 
+/* 갤러리 */
+#center .con1 .box ul.gallery li { float: left; margin-left: 10px;}
+#center .con1 .box ul.gallery li a:hover {opacity: 0.5;}
+#center .con1 .box ul.gallery li img {width: 75; height: 135px;}
+#center .con .con2 {float: right; width: 266px; height: 200px; background: #fff;}
+#center .con .con3 {float: right; width: 267px; height: 200px; background: #fff;}
+#center .con .con2 img:hover,
+#center .con .con3 img:hover {opacity: 0.7;}
+
+/* footer */
+#center footer {
+    width: 800px;
+    height: 100px;
+    clear: both;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+#center footer .footer {float: left;}
+#center footer .blogo { width: 150px; height: 100px; float: left;}
+#center footer .blogo img { width: 115px; margin-top: 35px; margin-left: 15px;}
+#center footer .blogo img:hover { opacity: 0.7;}
+#center footer .footer .bmenu {width: 650px; height: 50px;}
+#center footer .footer .bmenu ul {margin-left: 115px;}
+#center footer .footer .bmenu ul li {float: left; margin: 15px 15px 0 15px;}
+#center footer .footer .bmenu ul li a {color:#333;}
+#center footer .footer .bmenu ul li a:hover {color: #999;}
+#center footer .footer .copyright {
+    width: 650px; height: 50px;
+    border-top: 1px dotted #999;
+    box-sizing: border-box;
+}
+#center footer .footer .copyright p {
+    padding-top: 13px;
+    text-align: center;
+}
+
+#popup {
+    width: 400px; height: 300px;
+    border: 3px solid #5b9bd5;
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+
+#popup h3 {
+    font-size: 17px;
+    width: 400px; height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #5b9bd5;
+    color: #fff;
+}
+#popup .close {
+    background: #ff5050;
+    font-size: 13px;
+    padding: 7px 11px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+#popup .close:hover {background: #6e2d2d;}
+#popup .text {text-align: center; font-size: 14px; padding-top: 20px;}
+#popup .text p {font-size: 20px;}
