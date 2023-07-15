@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+* { font-family: 'Noto Sans KR', sans-serif; }
+a { text-decoration: none;}
+.font_w500 { font-weight: 500;}
+.font_w500_dblue { font-weight: 500; color:darkblue;}
+.font_gasoek {font-family: 'Gasoek One', sans-serif;}
+.mytable { vertical-align: middle;}
