@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS Templets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fbb7139956.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&family=Gasoek+One&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
+    <script>
+        window.onload = function () {
+            CKEDITOR.replace('content', {
+                height:500
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="p-2 bg-primary text-white text-center">
+        <h1 class="myh1">BBS Templets</h1>
+        <p class="myp">게시판 프로젝트</p>
+    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="main.html"><span class="myp"><i class="fa-solid fa-house-chimney"></i>&nbsp;Home</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="myp"><i class="fa-solid fa-rectangle-list"></i>&nbsp;게시판</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="myp"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;로그인</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><span class="myp"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;로그아웃</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-2">
+                <h2  class="myh2"><i class="fa-sharp fa-solid fa-pen-to-square"></i>&nbsp;글 쓰기 </h2>
+            </div>
+            <div class="col-7 mt-3">
+                <span class="my_span1"><a href="main.html"><i class="fa-solid fa-rectangle-list"></i>&nbsp;목록</a></span>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-8">
+                <form action="#" method="post">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td width="10%"><label for="title" class="col-form-label"><span class="myp">제목</span></label></td>
+                            <td><input type="text" name="title" id="title" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="content" class="col-form-label"><span class="myp">내용</span></label></td>
+                            <td><textarea name="content" id="editor" rows="10" class="form-control"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center;">
+                                <input class="btn btn-primary" type="submit" value="저장">
+                                <input class="btn btn-secondary" type="reset" value="취소">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+        
+
+    
+</body>
+</html>
