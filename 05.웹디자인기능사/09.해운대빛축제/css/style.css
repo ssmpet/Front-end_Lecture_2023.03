@@ -98,7 +98,7 @@ header .menu .accordion-menu .submenu>li>a:hover {color: #333; background: #ddd;
 /* 갤러리 */
 #center .con1 .box ul.gallery li { float: left; margin-left: 10px;}
 #center .con1 .box ul.gallery li a:hover {opacity: 0.5;}
-#center .con1 .box ul.gallery li img {width: 75; height: 135px;}
+#center .con1 .box ul.gallery li img {width: 75px; height: 135px;}
 #center .con .con2 {float: right; width: 266px; height: 200px; background: #fff;}
 #center .con .con3 {float: right; width: 267px; height: 200px; background: #fff;}
 #center .con .con2 img:hover,
