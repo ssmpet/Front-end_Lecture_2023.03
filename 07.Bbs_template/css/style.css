@@ -5,4 +5,14 @@ a { text-decoration: none;}
 .font_w500 { font-weight: 500;}
 .font_w500_dblue { font-weight: 500; color:darkblue;}
 .font_gasoek {font-family: 'Gasoek One', sans-serif;}
+
+.main_title {
+        background-color:bisque;
+        color:#3c0370;
+}
+
+.mynav_color {
+        background-color: #3c0370;
+        color:#fff;  
+}
 .mytable { vertical-align: middle;}
