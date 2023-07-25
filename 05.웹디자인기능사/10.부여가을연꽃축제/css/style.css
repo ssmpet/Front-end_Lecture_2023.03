@@ -5,9 +5,46 @@ ul, li { margin: 0; padding: 0; list-style: none;}
 a { text-decoration: none; color: #333;}
 body { background: #fff;}
 
-#wrap { width: 1000px; margin: 0; position: relative; }
+#wrap { width: 1000px; margin: 0; }
 
 /* header */
+header { width: 200px; height: 650px; float: left;}
+header .logo {width: 200px; height: 100px;}
+header .logo img { margin-top: 30px;}
+header .logo img:hover { opacity: 0.7;}
+
+header .menu { width: 200px; height: 550px; background: #999;}
+header .menu .accordion-menu { width: 100%; height: auto;}
+header .menu .accordion-menu>ul{width: 100%; height: auto;}
+header .menu .accordion-menu>ul>li{width: 100%; height: auto;}
+
+header .menu .accordion-menu>ul>li>a {display: block;
+    height: 50px; line-height: 50px; background: #666;
+    color: #fff; font-size: 15px; font-weight: bold;
+    padding: 0 20px;
+    border-bottom: 1px solid #555;
+    box-sizing: border-box;
+}
+header .menu .accordion-menu>ul>li>a:hover{ color: #333;}
+
+
+header .menu .accordion-menu .submenu {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+header .menu .accordion-menu .submenu>li {width: 100%; height: auto;}
+header .menu .accordion-menu .submenu>li>a {display: block;
+    height: 50px;
+    line-height: 50px;
+    background: #aaa;
+    color: #fff;
+    padding: 0 40px;
+    font-size: 14px;
+}
+
+header .menu .accordion-menu .submenu>li>a:hover {color: #333; background: #ddd;}
+
 
 
 /* center */
