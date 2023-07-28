@@ -68,7 +68,85 @@ header .menu .accordion-menu .submenu>li>a:hover {color: #333; background: #ddd;
     border-bottom: 1px dotted #999;
     line-height: 25px;
 }
-#center .con .con1 
+#center .con .con1 ul li a {color: #333; font-size: 15px;}
+#center .con .con1 ul li a:hover {color: #D01218; text-decoration: underline;}
+#center .con .con1 ul li span {float: right; color: #999; font-size: 14px;}
 
+#center .con .con2 { float: left; width: 266px; height: 200px; background: #ddd;}
+#center .con .con2 h2 {color: #000; padding: 10px 0 0 7px; font-size: 23px;}
+#center .con .con2 ul {display: flex; justify-content: space-evenly; margin-top: 14px;}
+#center .con .con2 ul li:hover {opacity: 0.7;}
+
+#center .con .con3 {float: left; width: 267px; height: 200px;}
+#center .con .con3 img:hover{ opacity: 0.7;}
+
+
+/* footer */
+#center footer { width: 800px; height: 100px; clear:both;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+#center footer .footer {float: left;}
+#center footer .copyright { width: 650px; height: 100px; float: left;}
+#center footer .copyright p {padding-top: 40px; text-align: center;}
+
+#center footer .footer .sns {width: 150px; height: 50px;}
+#center footer .sns ul { 
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0 0 15px;
+    margin-right: 20px;
+}
+
+#center footer .sns ul li img { width: 23px; height: 23px;}
+#center footer .sns ul li img:hover {opacity: 0.7;}
+
+#center footer .footer .fsite {width: 150px; height: 50px;}
+#center footer .footer .fsite select {
+    float: left;
+    margin-top: 10px;
+    background: #ddd;
+}
 
 /* popup */
+
+#popup {
+    width: 400px; height: 300px;
+    border: 3px solid #5b9bd5;
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+
+#popup h3 {
+    font-size: 17px;
+    width: 400px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #5b9bd5;
+    color: #ffffff;    
+}
+
+#popup .close {
+    background: #ff5050;
+    font-size: 13px;
+    padding: 7px 11px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+#popup .close:hover {background: #6e2d2d;}
+#popup .text {text-align: center; font-size: 14px; padding-top: 20px;}
+#popup .text p {font-size: 25px;}
