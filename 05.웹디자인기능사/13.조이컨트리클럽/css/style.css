@@ -8,4 +8,76 @@
 #wrap { 
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
+
+#aside {
+    width: 200px;
+}
+#aside .logo {
+    width: 100%;
+    height: 100px;
+    background-color: #fab4b4;
+}
+
+#aside .nav {
+    width: 100%;
+    height: 750px;
+    background-color: #632828;
+}
+
+
+#main {
+    width: calc(100% - 200px);
+    height: 850px;
+    background-color: aliceblue;
+}
+#slider { 
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-color: #544b4b;
+}
+#slider .link {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 300px;
+    background-color: #4d2d2d;
+ }
+
+#banner { 
+    width: 100%;
+    height: 200px;
+    background-color: #e6a9a9;
+}
+
+#contents { 
+    width: 100%;
+    height: 250px;
+    background-color: #b09191;
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+}
+
+#footer .footer1 { 
+    width: 20%;
+    height: 100px;
+    background-color: #312c2c;
+}
+
+#footer .footer2 { 
+    width: 60%;
+    height: 100px;
+    background-color: #756767;
+}
+
+#footer .footer3 {
+    width: 20%;
+    height: 100px;
+    background-color: #867d7d;
+ }
