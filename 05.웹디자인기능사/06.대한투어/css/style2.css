@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 * { margin: 0; padding: 0;}
+ul, li { margin: 0; padding: 0; list-style: none; }
+a { text-decoration: none; color: #333333; }
 
 #wrap {
     width: 100%;
@@ -27,8 +29,55 @@
 #header .nav{
     width: 80%;
     height: 100px;
+    text-align: right;
     background-color: #a49898;
  }
+
+.nav > ul {
+    display: flex;
+    justify-content: right;
+    margin-top: 30px;
+}
+.nav > ul > li {
+    position: relative;
+    
+}
+.nav > ul > li > a {
+    padding: 10px 50px;
+    display: inline-block;
+    background-color: #f29a9a;
+}
+.nav > ul > li > a:hover {
+    background-color: #d63131;
+}
+.nav > ul > li > ul {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 40px;
+    background-color: #ee9d9d;
+    display: none;
+}
+.nav > ul > li > ul > li {}
+.nav > ul > li > ul > li > a {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    background-color: #e7b5b5;
+    box-sizing: border-box;
+}
+.nav > ul > li > ul > li > a:hover {
+    background-color: #e15e5e;
+}
+
+/* 자바 스크립트용 css */
+.nav > ul > li > ul {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: all 600ms;
+}
 
 
 #slider {

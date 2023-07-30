@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 * { margin: 0; padding: 0;}
-
+ul, li { margin: 0; padding: 0; list-style: none; }
+a { text-decoration: none; color: #333333; }
 
 #wrap { 
     width: 1200px;
@@ -20,7 +21,46 @@
 #header .nav {
     width: 80%;
     height: 100px;
-    background-color: #956262;
+    background-color: #ebdddd;
+}
+
+.nav > ul {
+    display: flex;
+    justify-content: right;
+    margin-top: 30px;
+}
+.nav > ul > li {
+    position: relative;
+}
+.nav > ul > li > a {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #fff;
+}
+.nav > ul > li > a:hover { 
+    background-color: #af3232;
+}
+.nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 38px;
+    width: 100%;
+    text-align: center;
+    background-color: #e6cfcf;
+
+}
+.nav > ul > li > ul > li {} 
+
+.nav > ul > li > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f8cfcf;
+    box-sizing: border-box;
+}
+.nav > ul > li > ul > li > a:hover {
+    background-color: #e34747;
 }
 
 
@@ -77,4 +117,13 @@
     width: 100%;
     height:50px;
     background-color: #dbacac;
+}
+
+/* 자바스크립트용 css */
+.nav > ul > li > ul {
+    display: block;
+    height: 0px;
+    /* height: 165px; */
+    overflow: hidden;
+    transition: all 600ms;
 }
