@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
 }
+ul, li { margin: 0; padding: 0; list-style: none;}
+a { text-decoration: none; color: #333333;}
 
 #wrap {
     width: 1200px;
@@ -17,12 +19,76 @@
 #header .logo {
     width: 20%;
     height: 100px;
-    background-color: #4f3737;
+    background-color: #f6d8d8;
 }
 #header .nav {
     width: 80%;
     height: 100px;
-    background-color: #413131;
+    background-color: #c1bcbc;
+    
+}
+#header {
+    position: relative;
+}
+#header::after {
+    content : '';
+    width: 100%;
+    height: 0px;
+    background-color: #e28787;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    z-index: 1;
+    transition: all 400ms;
+}
+#header.on::after {
+    height: 165px;
+}
+
+.nav { z-index: 1000; }
+.nav > ul {
+    display: flex;
+    justify-content: right;
+    margin-top: 59px;
+}
+.nav > ul > li {
+    position: relative;
+}
+.nav > ul > li > a {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #d75c5c;
+}
+.nav > ul > li > a:hover { 
+    background-color: #a71212;
+}
+.nav > ul > li > ul {
+    position: absolute;
+    left: 0;
+    top: 41px;
+    width: 100%;
+    text-align: center;
+    /* background-color: #e28787; */
+    display: none;
+}
+.nav > ul > li > ul > li {}
+.nav > ul > li > ul > li > a {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav > ul > li > ul > li > a:hover { 
+    background-color: #a71212;
+}
+
+/* 자바스크립트를 위한 css */
+.nav > ul > li > ul {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: all 400ms;
 }
 
 #slider { 
