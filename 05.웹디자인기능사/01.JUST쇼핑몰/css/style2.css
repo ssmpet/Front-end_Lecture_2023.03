@@ -26,6 +26,7 @@ body {  background: #ffffff; color: #333333;}
     width: 80%;
     height: 100px;
     background-color: blue;
+    z-index: 1000;
 }
 
 .nav > ul {
@@ -62,14 +63,6 @@ body {  background: #ffffff; color: #333333;}
 }
 .nav > ul > li > ul > li > a:hover { 
     background-color: #7046da;
-}
-
-/* 자바스크립트 css */
-.nav > ul > li > ul {
-    display: block;
-    height: 0px;
-    overflow: hidden;
-    transition: all 600ms;
 }
 
 #slider {
