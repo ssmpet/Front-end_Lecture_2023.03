@@ -25,8 +25,9 @@ a { text-decoration: none; color: #333333;}
     width: 80%;
     height: 100px;
     background-color: #c1bcbc;
-    
+    z-index: 99999;   
 }
+
 #header {
     position: relative;
 }
@@ -42,7 +43,7 @@ a { text-decoration: none; color: #333333;}
     transition: all 400ms;
 }
 #header.on::after {
-    height: 165px;
+    height: 164px;
 }
 
 .nav { z-index: 1000; }
@@ -77,6 +78,7 @@ a { text-decoration: none; color: #333333;}
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
+    background-color: #e28787;
 }
 
 .nav > ul > li > ul > li > a:hover { 
@@ -84,12 +86,12 @@ a { text-decoration: none; color: #333333;}
 }
 
 /* 자바스크립트를 위한 css */
-.nav > ul > li > ul {
+/* .nav > ul > li > ul {
     display: block;
-    height: 0;
+    height: 0px;
     overflow: hidden;
     transition: all 400ms;
-}
+} */
 
 #slider { 
     width: 100%;
