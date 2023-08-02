@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 * { margin: 0; padding: 0;}
+ul, li { margin: 0; padding: 0; list-style: none; }
+a { text-decoration: none; color: #333333;}
 
 #wrap { 
     width: 100%;
@@ -29,6 +31,41 @@
     width: 80%;
     height: 100px;
     background-color: #3e3b3b;
+}
+
+.nav > ul {
+    display: flex;
+    justify-content: right;
+    margin-top: 30px;
+}
+.nav > ul > li {
+    position: relative;
+}
+.nav > ul > li > a {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #ecb5b5;
+}
+.nav > ul > li > a:hover {
+    background-color: #e78888;
+}
+.nav > ul > li > ul {
+    width: 100%;
+    left: 0;
+    top: 40px;
+    text-align: center;
+    position: absolute;
+    display: none;
+}
+.nav > ul > li > ul > li > a {
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    background-color: #eda2a2;
+    box-sizing: border-box;
+}
+.nav > ul > li > ul > li > a:hover {
+    background-color: #e78888;
 }
 
 

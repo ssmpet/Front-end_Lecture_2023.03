@@ -20,6 +20,7 @@ a { text-decoration: none; color: #333333; }
     margin: 0 auto;
     display: flex;
     background-color: rgb(0, 0, 0, 0.2);
+    position: relative;
  }
 #header .logo {
     width: 20%;
@@ -31,12 +32,23 @@ a { text-decoration: none; color: #333333; }
     height: 100px;
     text-align: right;
     background-color: #a49898;
+    z-index: 99999;
  }
 
+ #header .background {
+    width: 1200px;
+    left: 0px;
+    top: 100px;
+    height: 165px;
+    position: absolute;
+    background-color: #e7b5b5;
+    z-index: 9;
+    display: none;
+ }
 .nav > ul {
     display: flex;
     justify-content: right;
-    margin-top: 30px;
+    margin-top: 59px;
 }
 .nav > ul > li {
     position: relative;
@@ -55,11 +67,10 @@ a { text-decoration: none; color: #333333; }
     width: 100%;
     text-align: center;
     left: 0;
-    top: 40px;
+    top: 41px;
     background-color: #ee9d9d;
     display: none;
 }
-.nav > ul > li > ul > li {}
 .nav > ul > li > ul > li > a {
     display: inline-block;
     padding: 10px;
@@ -72,12 +83,12 @@ a { text-decoration: none; color: #333333; }
 }
 
 /* 자바 스크립트용 css */
-.nav > ul > li > ul {
+/* .nav > ul > li > ul {
     display: block;
     height: 0;
     overflow: hidden;
     transition: all 600ms;
-}
+} */
 
 
 #slider {

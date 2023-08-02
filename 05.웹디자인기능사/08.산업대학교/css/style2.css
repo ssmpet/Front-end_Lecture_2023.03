@@ -1,6 +1,8 @@
 @charset "utf-8";
 
 * { margin: 0; padding: 0;}
+ul, li {margin: 0; padding: 0; list-style: none; }
+a { text-decoration: none; color: #333333;}
 
 #wrap { 
     width: 100%;
@@ -17,6 +19,7 @@
 #header {
     width: 100%;
     background-color: #5b5151;
+    position: relative;
 }
 #header .logo {
     width: 20%;
@@ -27,6 +30,53 @@
     width: 80%;
     height: 100px;
     background-color: #382929;
+    text-align: right;
+    z-index: 99999;
+}
+
+.nav > ul {
+    display: flex;
+    justify-content: right;
+    margin-top: 59px;
+}
+.nav > ul > li {
+    position: relative;
+}
+.nav > ul > li > a {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #ef9393;
+}
+.nav > ul > li > a:hover { 
+    background-color: #e05555;
+}
+.nav > ul > li > ul {
+    position: absolute;
+    left: 0;
+    top: 41px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+.nav > ul > li > ul > li > a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #e76a6a;
+    width: 100%;
+    box-sizing: border-box;
+}
+.nav > ul > li > ul > li > a:hover { 
+    background-color: #e05555;
+}
+
+#header .background {
+    position: absolute;
+    width: 1200px;
+    height: 166px;
+    top: 100px;
+    background-color: #e76a6a;
+    z-index: 9;
+    display: none;
 }
 
 #slider {
