@@ -12,6 +12,7 @@ a { text-decoration: none; color: #333333; }
 #header {
     width: 100%;
     display: flex;
+    position: relative;
 }
 #header .logo{
     width: 20%;
@@ -25,7 +26,7 @@ a { text-decoration: none; color: #333333; }
     z-index: 1000;
 }
 
-#header { 
+/* #header { 
     position: relative;
 }
 #header::after {
@@ -40,7 +41,19 @@ a { text-decoration: none; color: #333333; }
 
 #header.on::after {
     height: 166px;
+} */
+
+.background {
+
+    position: absolute;
+    width: 1200px;
+    height: 165px;
+    top: 100px;
+    z-index: 1;
+    background-color: #e4b0b0;
+    display: none;
 }
+
 .nav > ul {
     display: flex;
     justify-content: right;
@@ -62,19 +75,19 @@ a { text-decoration: none; color: #333333; }
     text-align: center;
     width: 100%;
     left: 0;
-    top: 40px;
+    top: 41px;
     display: none;
 }
 .nav > ul > li > ul > li {}
 .nav > ul > li > ul > li > a {
     display: inline-block;
     padding: 10px;
-    background-color: #8f5d5d;
+    background-color: #e4b0b0;
     width: 100%;
     box-sizing: border-box;
 }
 .nav > ul > li > ul > li > a:hover { 
-    background-color: #ee7171;
+    background-color: #eec9c9;
 }
 
 #slider {

@@ -15,6 +15,7 @@ a { text-decoration: none; color: #333333;}
 #header { 
     width: 100%;
     display: flex;
+    position: relative;
 }
 #header .logo {
     width: 20%;
@@ -27,7 +28,7 @@ a { text-decoration: none; color: #333333;}
     background-color: #c1bcbc;
     z-index: 1000;   
 }
-
+/* 
 #header {
     position: relative;
 }
@@ -44,6 +45,16 @@ a { text-decoration: none; color: #333333;}
 }
 #header.on::after {
     height: 164px;
+} */
+
+#header .background {
+    position: absolute;
+    width: 1200px;
+    height: 165px;
+    top: 100px;
+    z-index: 9;
+    background-color: #e28787;
+    display: none;
 }
 
 .nav > ul {
