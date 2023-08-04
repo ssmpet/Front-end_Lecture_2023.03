@@ -1,9 +1,9 @@
 $(function(){
-    $('.nav > ul > li').hover(function(){
+    $('.nav > ul > li').mouseenter(function(){
+        $(thie).find('.submenu').stop().slideDown(400);
+    });
 
-        $('.nav > ul > li > ul').stop().fadeIn(900);
-    }, function(
-        $('.nav > ul > li > ul').stop().fadeOut(100);
-
-    ){});
+    $('.nav > ul > li').mouseleave(function(){
+        $(thie).find('.submenu').stop().slideUp(100);
+    });
 });

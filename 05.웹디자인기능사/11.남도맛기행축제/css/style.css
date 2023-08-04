@@ -22,7 +22,7 @@ body { background: #fff;}
 #aside .logo {
     width: 100%;
     height: 100px;
-    background-color: #d9d9d9;
+    background-color: #ece4e4;
 }
 
 
@@ -31,11 +31,15 @@ body { background: #fff;}
     height: 550px;
     background-color: #d1d1d1;
     position: relative;
+    z-index: 999;
+
 }
 
 .nav > ul {}
 .nav > ul > li {
+    padding: 0 10px;
     position: relative;
+
 }
 .nav > ul > li > a {
     padding: 10px;
@@ -45,44 +49,31 @@ body { background: #fff;}
 }
 .nav > ul > li > a:hover {
     background-color: #fc7777;
+
 }
 .nav > ul > li > ul {
-    /* display: none; */
-    right: -700px;
+    display: none;
+    left: 190px;
     top: 0;
-    width: 700px;
-    padding: 10px;
-   
+    width: 150px;
     position: absolute;
+    text-align: center;
     background-color: #b26565;
 }
 .nav > ul > li > ul > li {
-    display: inline;
+    display: block;
+    width: 100%;
 }
 .nav > ul > li > ul > li > a {
     padding: 10px;
-    display: inline-block;
+    display: block;
+    /* background-color: #e05858; */
+    
 }
 .nav > ul > li > ul > li > a:hover {
     background-color: #be7c7c;
 }
 
-#main {
-    position: relative;
-}
-#main::after {
-    content: '';
-    width: 100%;
-    height: 200px;
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-    top: 100px;
-    z-index: 1;
-}
-#main.on::after {
-    
-}
 #main {
     width: 80%;
 }
