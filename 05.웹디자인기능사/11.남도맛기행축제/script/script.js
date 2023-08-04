@@ -1,9 +1,10 @@
 $(function(){
-    $('.nav > ul > li').mouseenter(function(){
-        $(thie).find('.submenu').stop().slideDown(400);
-    });
-
-    $('.nav > ul > li').mouseleave(function(){
-        $(thie).find('.submenu').stop().slideUp(100);
-    });
+    $('.nav > ul > li').hover( 
+        function(){
+            $(this).find('.submenu').stop().fadeIn(400);
+        },
+        function(){
+            $(this).find('.submenu').stop().fadeOut(400);
+        }
+    );
 });

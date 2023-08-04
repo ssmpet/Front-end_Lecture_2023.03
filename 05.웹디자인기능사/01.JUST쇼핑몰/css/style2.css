@@ -71,6 +71,32 @@ body {  background: #ffffff; color: #333333;}
     background-color: antiquewhite;
 }
 
+.sliderWrap {
+    position: relative;
+} 
+.sliderWrap > div {
+    display: none;
+}
+.sliderWrap > div:first-child {
+    display: block;
+}
+.sliderWrap  .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+} 
+.sliderWrap .slider img {
+    vertical-align: top;
+}
+.sliderWrap  .slider span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
 #con {
     width: 100%;
     display: flex;
