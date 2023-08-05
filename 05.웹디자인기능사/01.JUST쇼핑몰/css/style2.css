@@ -9,6 +9,7 @@ body {  background: #ffffff; color: #333333;}
     width: 1200px;
     /* 왼오  좌우 */
     margin: 0 auto; 
+    position: relative;
 }
 
 #header {
@@ -107,6 +108,32 @@ body {  background: #ffffff; color: #333333;}
     height: 200px;
     background-color: #d1d1d1;
 }
+
+.tab-menu {
+    padding: 20px;
+}
+.tab-menu .tab-btn ul {
+    display: flex;
+}
+.tab-menu .tab-btn li.active a {
+    text-decoration: underline;
+}
+.tab-menu .tab-btn a {
+    display: block;
+    padding: 10px;
+    background-color: #c9a3a3;
+}
+
+.tab-menu .tab-cont > div {
+    padding: 10px;
+    background-color: #eee5e5;
+    line-height: 1.6;
+}
+
+.tab-menu .tab-cont > div:nth-child(2) {
+    display: none;
+}
+
 #con .con2 {
     width: 33.3333%;
     height: 200px;
@@ -139,4 +166,23 @@ body {  background: #ffffff; color: #333333;}
     width: 20%;
     height: 100px;
     background-color: rgb(199, 230, 243);
+}
+
+
+.popup-view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border: 3px solid;
+    display: none;
+}
+
+.popup-view .popup-close { 
+    background-color: #ae2020;
+    padding: 10px;
+    display: inline-block;
 }

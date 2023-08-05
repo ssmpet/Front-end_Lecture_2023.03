@@ -46,7 +46,7 @@
 
 #slider {
     width: calc(100% - 600px);
-    height:100%;
+    height:calc(100vh -100px);
     background-color: #d1a6a6;
     overflow: hidden;
 }
@@ -63,6 +63,9 @@
     background-size: cover;
     position: relative;
 }
+.sliderWrap .slider img {
+    vertical-align: top;
+}
 
 .sliderWrap .slider.s1 { 
     background-image: url("../images/slider01.jpg");
@@ -73,9 +76,7 @@
 .sliderWrap .slider.s3 { 
     background-image: url("../images/slider03.jpg");
 }
-.sliderWrap .slider img {
-    vertical-align: top;
-}
+
 .sliderWrap .slider span {
     position: absolute;
     left: 50%;
