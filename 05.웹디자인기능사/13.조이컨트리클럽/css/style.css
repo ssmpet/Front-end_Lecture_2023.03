@@ -3,7 +3,7 @@
 * {margin: 0; padding: 0;}
 ul, li { margin: 0; padding: 0; list-style: none;}
 a { text-decoration: none; color: #333333;}
-
+body { background-color: #fff;}
 #wrap { 
     width: 100%;    
     display: flex;
@@ -23,7 +23,7 @@ a { text-decoration: none; color: #333333;}
 .nav {
     width: 100%;
     height: 750px;
-    background-color: #aaa4a4;
+    /* background-color: #aaa4a4; */
 }
 
 .nav > ul {
@@ -52,7 +52,7 @@ a { text-decoration: none; color: #333333;}
 #main {
     width: calc(100% - 200px);
     height: 850px;
-    background-color: #d2d0d0;
+    /* background-color: #d2d0d0; */
 }
 
 #slider {
@@ -102,7 +102,7 @@ a { text-decoration: none; color: #333333;}
 #contents {
     width: 100%;
     height: 250px;
-    background-color: #c1bfbf;
+    /* background-color: #c1bfbf; */
 }
 
 .tab-menu { 
@@ -113,12 +113,68 @@ a { text-decoration: none; color: #333333;}
 }
 .tab-menu .tab-btn ul {
     display: flex;
+    border-bottom: 1px solid #e94141;
 }
 .tab-menu .tab-btn ul li { 
-    padding: 10px 20px;
+    padding: 5px 50px;
     display: inline-block;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #e1e0e0;
 }
-.tab-menu .tab-cont {}
+.tab-menu .tab-btn ul li.active {
+    display: block;
+    background-color: #e94141;
+ }
+
+
+.tab-menu .tab-cont {
+    background-color: #fff;
+}
+.tab-cont .notice { 
+ }
+
+.notice > ul > li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed;
+ }
+.notice > ul > li > a {
+    width: 75%;
+    display: block;
+    padding: 5px 50px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+ }
+ .notice > ul > li > a:hover {
+    color: #e94141;
+ }
+.notice ul > li > span {
+    padding: 5px 50px;
+    width: 25%;
+    text-align: center;
+    /* background-color: #d77373; */
+ }
+
+ .gallery  {
+
+ }
+ .gallery ul {
+    display: flex;
+
+ }
+ .gallery ul li {
+    display: block;
+    padding: 5px;
+ }
+ .gallery ul li a {
+   
+ }
+ .gallery ul li a:hover {
+    opacity: 0.7;
+ }
 
 #footer {
     width: 100%;
@@ -128,15 +184,15 @@ a { text-decoration: none; color: #333333;}
 .footer1 {
     width: 200px;
     height: 100px;
-    background-color: #c3bdbd;
+    background-color: #156e4b;
 }
 .footer2 {
     width: calc(100% - 200px - 20%);
     height: 100px;
-    background-color: #d5bfbf;
+    background-color: #dfdfdf;
 }
 .footer3 {
     width: 20%;
     height: 100px;
-    background-color: #5c5b5b;
+    background-color: #dfdfdf;
 }
