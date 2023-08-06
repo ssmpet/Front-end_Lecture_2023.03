@@ -26,4 +26,12 @@ $(function(){
         $(this).addClass("active").siblings().removeClass("active");
         tabCont.eq(index).show().siblings().hide();
     });
+
+    $('.popupLayer').click(function(){
+        $('#popup').show();
+    });
+
+    $('.close').click(function(){
+        $('#popup').hide();
+    });
 });

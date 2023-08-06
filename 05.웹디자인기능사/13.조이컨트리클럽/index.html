@@ -16,37 +16,38 @@
                 <img src="./images/logo.jpg" alt="로고">
             </h1>
             <nav class="nav">
-                <nav class="nav">
-                    <ul>
-                        <li><a href="#">CLUB</a>
-                            <ul class="submenu">
-                                <li><a href="#">클럽소개</a></li>
-                                <li><a href="#">시설안내</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#"> BOOKING</a>
-                            <ul class="submenu">
-                                <li><a href="#">요금안내</a></li>
-                                <li><a href="#">예약안내</a></li>
-                                <li><a href="#">위약안내</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">INFORMATION</a>
-                            <ul class="submenu">
-                                <li><a href="#">명예의 전당</a></li>
-                                <li><a href="#">이벤트</a></li>
-                                <li><a href="#">자료실</a></li>
-                                <li><a href="#">포토갤러리</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">COMMUNITY</a>
-                            <ul class="submenu">
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">Q&A</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                <ul>
+                    <li><a href="#">CLUB</a>
+                        <ul class="submenu">
+                            <li><a href="#">클럽소개</a></li>
+                            <li><a href="#">시설안내</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"> BOOKING</a>
+                        <ul class="submenu">
+                            <li><a href="#">요금안내</a></li>
+                            <li><a href="#">예약안내</a></li>
+                            <li><a href="#">위약안내</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">INFORMATION</a>
+                        <ul class="submenu">
+                            <li><a href="#">명예의 전당</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">자료실</a></li>
+                            <li><a href="#">포토갤러리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COMMUNITY</a>
+                        <ul class="submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">Q&A</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="login">
+                    <p><a href="#">로그인</a>   |    <a href="#">회원가입</a></p>
+                </div>
             </nav>
             <!-- //nav -->
         </aside>
@@ -68,12 +69,17 @@
                     </div>
                 </div>
                 <div class="link">
-
+                    <div><a href="#"><img src="./images/gallery01.jpg" alt="link1"></a></div>
+                    <div><a href="#"><img src="./images/gallery02.jpg" alt="link1"></a></div>
+                    <div><a href="#"><img src="./images/gallery03.jpg" alt="link1"></a></div>
                 </div>
             </article>
             <!-- //slider -->
             <article id="banner">
-
+                <div class="con1"><a href="#"><img src="./images/gallery01.jpg" alt="배너"></a></div>
+                <div class="con2"><p>조이컨트리클럽</p></div>
+                <div class="con3"><a href="#"><img src="./images/arrow.png" alt="next"></a></div>
+                
             </article>
             <!-- //banner -->
             <section id="contents">
@@ -87,7 +93,7 @@
                     <div class="tab-cont">
                         <div class="notice">
                             <ul>
-                                <li><a href="#">2023 관광산업 디지털혁신 오픈세미나 개최</a><span>2023-08-06</span></li>
+                                <li><a href="#" class="popupLayer">2023 관광산업 디지털혁신 오픈세미나 개최</a><span>2023-08-06</span></li>
                                 <li><a href="#">여행 지원금 혜택 - 광주 여행 특별하게 떠나보자!</a><span>2023-08-06</span></li>
                                 <li><a href="#">숙박과 놀이공원 할인쿠폰 받자!</a><span>2023-08-06</span></li>
                                 <li><a href="#">조선시대 의궤를 실감 콘텐츠로 만나다. </a><span>2023-08-06</span></li>
@@ -109,11 +115,31 @@
         <!-- //main -->
         <footer id="footer">
             <div class="footer1"><img src="./images/blogo.jpg" alt="로고"></div>
-            <div class="footer2"></div>
-            <div class="footer3"></div>
+            <div class="footer2">
+                <p>copyright</p>
+            </div>
+            <div class="footer3">
+                <ul>
+                    <li><a href="#" title="페이스북"><img src="./images/f.png" alt="페이스북"></a></li>
+                    <li><a href="#" title="트위터"><img src="./images/t.png" alt="트위터"></a></li>
+                    <li><a href="#" title="유튜브"><img src="./images/y.png" alt="유튜브"></a></li>
+                </ul>
+            </div>
         </footer>
         <!-- //footer -->
+
+        <div id="popup">
+            <h3>공지사항</h3>
+            <div class="close">X 닫기</div>
+            <div class="text">
+                <br>
+                <p>채용공고</p><br>
+                다음과 같은 내용으로 채용합니다.<br>
+                연락처: 000-0000-0000
+            </div>
+        </div>
     </div>
     <!-- //wrap -->
+    
 </body>
 </html>
