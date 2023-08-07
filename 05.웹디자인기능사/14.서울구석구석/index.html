@@ -4,42 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>서울구석구석</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./script/jquery-1.12.3.js"></script>
     <script src="./script/script.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div id="wrap">
+
         <aside id="aside">
-            <h1 class="logo"></h1>
-            <nav class="nav"></nav>
+            <h1 class="logo">
+                <a href="#"><img src="./images/logo.jpg" alt="로고"></a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">지금의 서울</a>
+                        <ul class="submenu">
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">축제&행사</a></li>
+                            <li><a href="#">전시</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">추천</a>
+                        <ul class="submenu">
+                            <li><a href="#">에디터 추천</a></li>
+                            <li><a href="#">테마코스</a></li>
+                            <li><a href="#">도보해설관광</a></li>
+                            <li><a href="#">한류관광</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">여행지</a>
+                        <ul class="submenu">
+                            <li><a href="#">명소</a></li>
+                            <li><a href="#">엔터테인먼트</a></li>
+                            <li><a href="#">음식</a></li>
+                            <li><a href="#">게스트하우스</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">여행정보</a>
+                        <ul class="submenu">
+                            <li><a href="#">가이드북&지도</a></li>
+                            <li><a href="#">시티투어버스</a></li>
+                            <li><a href="#">날씨</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- //nav -->
         </aside>
         <!-- //aside -->
 
         <main id="main">
             <article id="slider">
-                <div class="image"></div>
-                <div class="banner"></div>
+                <div class="sliderWrap">
+                    <div class="sliderList">
+                        <div class="sliderImg"><a href="#"><img src="./images/slider01.jpg" alt="슬라이더1"></a></div>
+                        <div class="sliderImg"><a href="#"><img src="./images/slider02.jpg" alt="슬라이더2"></a></div>
+                        <div class="sliderImg"><a href="#"><img src="./images/slider03.jpg" alt="슬라이더3"></a></div>
+                    </div>
+                </div>
+                <!-- sliderWrap -->
+                <div class="banner">
+                    <div class="ban1"><img src="./images/gallery01.jpg" alt="배너1"></div>
+                    <div class="ban2">
+                        <h3>title</h3>
+                        <p>contenttsss</p>
+                    </div>
+                    <div class="ban3"><img src="./images/arrow.png" alt="next"></div>
+                </div>
+                <!-- //banner -->
             </article>
-            <!-- //article -->
-
+            <!-- //slider -->
             <section id="contents">
-                <div class="content1"></div>
-                <div class="content2"></div>
+                <div class="content">
+                    <div class="notice">
+                        <h3>공지사항</h3>
+                        <ul>
+                            <li><a href="#" class="popupLayer">내용1내용1내용1내용1내용1내용1내용1</a><span>2023-01-09</span></li>
+                            <li><a href="#">내용1내용1내용1내용1내용1내용1내용1</a><span>2023-01-09</span></li>
+                            <li><a href="#">내용1내용1내용1내용1내용1내용1내용1</a><span>2023-01-09</span></li>
+                            <li><a href="#">내용1내용1내용1내용1내용1내용1내용1</a><span>2023-01-09</span></li>
+                            <li><a href="#">내용1내용1내용1내용1내용1내용1내용1</a><span>2023-01-09</span></li>
+                        </ul>                        
+                    </div>
+                    <div class="gallery">
+                        <h3>갤러리</h3>
+                        <ul>
+                            <li><a href="#"><img src="./images/gallery01.jpg" alt="갤러리01"><span>갤러리01</span></a></li>
+                            <li><a href="#"><img src="./images/gallery02.jpg" alt="갤러리02"><span>갤러리02</span></a></li>
+                            <li><a href="#"><img src="./images/gallery03.jpg" alt="갤러리03"><span>갤러리03</span></a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
             </section>
             <!-- //contents -->
-
         </main>
-        <!-- //main -->
-
         <footer id="footer">
-            <div class="footer1"></div>
-            <div class="footer2"></div>
-            <div class="footer3"></div>
+            <div class="blogo"><img src="./images/blogo.jpg" alt="하단로고"></div>
+            <div class="copyright">
+                <h3>copyright</h3>
+                <p>copyright</p>
+            </div>
+            <div class="fsite">
+                <select>
+                    <option value="#">패밀리사이트</option>
+                    <option value="#">패밀리사이트1</option>
+                    <option value="#">패밀리사이트2</option>
+                    <option value="#">패밀리사이트3</option>
+                </select>
+            </div>
         </footer>
         <!-- //footer -->
-
+        <div id="popup">
+            <h3>공지사항</h3>
+            <div class="close">X 닫기</div>
+            <div class="text">
+                <br>
+                <p>공지사항입니다.</p><br><br>
+                ~~~~<br>
+                2023-03-09
+            </div>
+        </div>
     </div>
-    
+    <!-- //wrap -->
 </body>
 </html>
