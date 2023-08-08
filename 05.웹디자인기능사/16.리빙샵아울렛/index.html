@@ -4,45 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>리빙샵아울렛</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./script/jquery-1.12.3.js"></script>
     <script src="./script/script.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
     <div id="wrap">
         <aside id="aside">
-            <h1 class="logo"></h1>
-            <nav class="nav"></nav>
+            <h1 class="logo"><a href="#"><img src="./images/logo.jpg" alt="로고"></a></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">인기모음전</a>
+                        <ul class="submenu">
+                            <li><a href="#">수저모음</a></li>
+                            <li><a href="#">도마모음</a></li>
+                            <li><a href="#">그릇모음</a></li>
+                            <li><a href="#">접시모음</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">베스트상품</a>
+                        <ul class="submenu">
+                            <li><a href="#">주방용품</a></li>
+                            <li><a href="#">설비제품</a></li>
+                            <li><a href="#">인덕션제품</a></li>
+                            <li><a href="#">실리콘제품</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">업종별샵</a>
+                        <ul class="submenu">
+                            <li><a href="#">한식기물</a></li>
+                            <li><a href="#">양식기물</a></li>
+                            <li><a href="#">일식기물</a></li>
+                            <li><a href="#">중식기물</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">인덕션용품</a>
+                        <ul class="submenu">
+                            <li><a href="#">냄비/솥</a></li>
+                            <li><a href="#">후라이팬/주물</a></li>
+                            <li><a href="#">인덕션렌지</a></li>
+                            <li><a href="#">기타제품</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+            <!-- nav -->
         </aside>
         <!-- //aside -->
         <main id="main">
             <article id="slider">
-
+                <div class="sliderWrap">
+                    <div class="sliderImg"><a href="#"><img src="./images/slider01.jpg" alt="슬라이더1"></a><span>이미지1</span></div>
+                    <div class="sliderImg"><a href="#"><img src="./images/slider02.jpg" alt="슬라이더2"></a><span>이미지2</span></div>
+                    <div class="sliderImg"><a href="#"><img src="./images/slider03.jpg" alt="슬라이더3"></a><span>이미지3</span></div>
+                </div>
             </article>
             <!-- //slider -->
 
             <article id="link">
-
+                <ul>
+                    <li><a href="#"><img src="images/gallery01.jpg" alt="link1"></a></li>
+                    <li><a href="#"><img src="images/gallery01.jpg" alt="link2"></a></li>
+                    <li><a href="#"><img src="images/gallery01.jpg" alt="link3"></a></li>
+                    <li><a href="#"><img src="images/gallery01.jpg" alt="link4"></a></li>
+                    <li><a href="#"><img src="images/gallery01.jpg" alt="link5"></a></li>
+                    <li><a href="#"><img src="images/gallery01.jpg" alt="link6"></a></li>
+                    <li><a href="#"><img src="images/gallery01.jpg" alt="link7"></a></li>
+                </ul>
             </article>
             <!-- //link -->
-            
+
             <section id="contents">
-                <div class="content1"></div>
-                <div class="content2"></div>
+                <div class="notice">
+                    <h3>공지사항</h3>
+                    <div class="notice-con">
+                        <ul>
+                            <li><a href="#" class="popupLayer">공지사항1111111</a><span>2023-04-30</span></li>
+                            <li><a href="#">공지사항1111111</a><span>2023-04-30</span></li>
+                            <li><a href="#">공지사항1111111</a><span>2023-04-30</span></li>
+                            <li><a href="#">공지사항1111111</a><span>2023-04-30</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <h3>갤러리</h3>
+                    <div class="gallery-con">
+                        <ul>
+                            <li><a href="#"><img src="./images/gallery01.jpg" alt="갤러리1"></a><br><span>갤러리1</span></li>
+                            <li><a href="#"><img src="./images/gallery02.jpg" alt="갤러리2"></a><br><span>갤러리2</span></li>
+                            <li><a href="#"><img src="./images/gallery03.jpg" alt="갤러리3"></a><br><span>갤러리3</span></li>
+                        </ul>
+                    </div>
+                </div>
             </section>
-            <!-- //section -->
+            <!-- //contents -->
         </main>
         <!-- //main -->
-
         <footer id="footer">
             <div class="footer1"></div>
             <div class="footer2">
-                <div class="footer2-1"></div>
-                <div class="footer2-2"></div>
+                <div class="bmenu">
+                    <ul>
+                        <li><a href="#">하단 메뉴 1</a></li>
+                        <li><a href="#">하단 메뉴 2</a></li>
+                        <li><a href="#">하단 메뉴 3</a></li>
+                        <li><a href="#">하단 메뉴 4</a></li>
+                        <li><a href="#">하단 메뉴 5</a></li>
+                        <li><a href="#">하단 메뉴 6</a></li>
+                        <li><a href="#">하단 메뉴 7</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>copyrightcopyrightcopyrightcopyright</p>
+                </div>
             </div>
-            <div class="footer3"></div>
+            <div class="fsite">
+                <select>
+                    <option value="#">패밀리사이트</option>
+                    <option value="#">패밀리사이트1</option>
+                    <option value="#">패밀리사이트2</option>
+                    <option value="#">패밀리사이트3</option>
+                </select>
+            </div>
         </footer>
         <!-- //footer -->
+        <div id="popup">
+            <h3>공지사항</h3>
+            <div class="close">X 닫기</div>
+            <div class="text">
+                <br>
+                <p>공지사항입니다.</p><br>
+                ~~~~~~~~~~~~~~~~`~<br>
+                !!!!!!!!!!!!!!!!!!!!<br>
+                2023-06-04
+            </div>
+        </div>
     </div>
     <!-- //wrap -->
 </body>
