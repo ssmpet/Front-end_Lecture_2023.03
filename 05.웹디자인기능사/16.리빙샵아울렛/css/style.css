@@ -45,8 +45,9 @@ a { text-decoration: none; color: #333;}
     left: 180px;
     top: 0;
     width: calc(100vw - 190px);
-    background-color: #79eb6c;
+    background-color: rgb(121, 235, 108, 0.9);
     display: none;
+    z-index: 999;
 }
 .nav > ul > li > ul > li {
     display: inline;
