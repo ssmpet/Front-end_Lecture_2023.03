@@ -4,47 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>김치이야기</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./script/jquery-1.12.3.js"></script>
     <script src="./script/script.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+
     <div id="wrap">
-        <main id="main">
-            <header id="header">
-                <h1 class="logo"></h1>
-                <nav class="nav"></nav>
-            </header>
-            <!-- //header -->
-
-            <section id="contents">
-                <article class="banner"></article>
-                <article class="notice"></article>
-                <article class="gallery"></article>
-                <article class="link"></article>
-            </section>
-            <!-- //contents -->
-
-            <article id="slider">
-                <div class="sliderWrap">
-                    <div class="slider s1"><span>이미지1</span></div>
-                    <div class="slider s2"><span>이미지2</span></div>
-                    <div class="slider s3"><span>이미지3</span></div>
+        <aside id="aside">
+            <h1 class="logo">
+                <a href="#"><img src="./images/logo.png" alt="로고"></a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">김치 소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">초대의 글</a></li>
+                            <li><a href="#">김치의 유래</a></li>
+                            <li><a href="#">김치 재료</a></li>
+                            <li><a href="#">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">김치퓨전</a>
+                        <ul class="submenu">
+                            <li><a href="#">지역별 김치</a></li>
+                            <li><a href="#">김치 스파게티</a></li>
+                            <li><a href="#">김치 볶음밥</a></li>
+                            <li><a href="#">김치와 고기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">체험프로그램</a>
+                        <ul class="submenu">
+                            <li><a href="#">김치 담그기</a></li>
+                            <li><a href="#">명사와 함께</a></li>
+                            <li><a href="#">관람하기</a></li>
+                            <li><a href="#">예약하기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">커뮤니티</a>
+                        <ul class="submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">참여게시판</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="spopmenu">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>
                 </div>
-            </article>
-            <!-- //slider -->
-        </main>
-        <!-- //main -->
+            </nav>
+            <!-- //nav -->
+        </aside>
+        <!-- //aside -->
+        <section id="main">
+            <div class="barnner">
+                <div class="bimg">
+                    <img src="./images/link01.jpg" alt="이미지">
+                </div>
+                <div class="content">
+                    <h5>lorder lkjf</h5>
+                    <p>설명~~~~~~~~~~~~~</p>
+                </div>
+                <div class="next">
+                    <a href="#">&gt;</a>
+                </div>
+            </div>
+            <div class="notice">
+                <h3>공지사항</h3>
+                <ul>
+                    <li><a href="#" class="popupLayer">Lorenm ipum dolor sit amet</a><span>2023-08-03</span></li>
+                    <li><a href="#">Lorenm ipum dolor sit amet</a><span>2023-08-03</span></li>
+                    <li><a href="#">Lorenm ipum dolor sit amet</a><span>2023-08-03</span></li>
+                </ul>
+            </div>
+            <div class="gallery">
+                <h3>갤러리</h3>
+                <ul>
+                    <li><a href="#"><img src="./images/gallery01.jpg" alt="갤러리1"></a><span>Loren ipsun dolo at an</span></li>
+                    <li><a href="#"><img src="./images/gallery01.jpg" alt="갤러리2"></a><span>Loren ipsun dolo at an</span></li>
+                </ul>
+            </div>
+            <div class="link">
+                <ul>
+                    <li><a href="#"><img src="./images/link01.jpg" alt="링크1"></a></li>
+                    <li><a href="#"><img src="./images/link01.jpg" alt="링크2"></a></li>
+                    <li><a href="#"><img src="./images/link01.jpg" alt="링크3"></a></li>
+                    <li><a href="#"><img src="./images/link01.jpg" alt="링크4"></a></li>
+                </ul>
 
+            </div>
+        </section>
+        <!-- //main -->
+        <article id="slider">
+            <div class="sliderWrap">
+                <div class="sliderImg"><a href="#"><img src="./images/slider01.jpg" alt="슬라이드1"></a><span>이미지1</span></div>
+                <div class="sliderImg"><a href="#"><img src="./images/slider02.jpg" alt="슬라이드2"></a><span>이미지2</span></div>
+                <div class="sliderImg"><a href="#"><img src="./images/slider03.jpg" alt="슬라이드3"></a><span>이미지3</span></div>
+            </div>
+        </article>
+        <!-- //slider -->
         <footer id="footer">
-            <div class="footer1"></div>
-            <div class="footer2">
-                <div class="footer2-1"></div>
-                <div class="footer2-2"></div>
+            <div class="blogo">
+                <img src="./images/blogo.png" alt="하단로고">
+            </div>
+            <div class="bmenu">
+                <div class="bmenulist">
+                    <ul>
+                        <li><a href="#">bmenu1</a></li>
+                        <li><a href="#">bmenu2</a></li>
+                        <li><a href="#">bmenu3</a></li>
+                        <li><a href="#">bmenu4</a></li>
+                        <li><a href="#">bmenu5</a></li>
+                        <li><a href="#">bmenu6</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <P>
+                        sldkfj<br>
+                        sldkjf
+                    </P>
+
+                </div>
             </div>
         </footer>
         <!-- //footer -->
+
+        <div id="popup">
+            <h3>공지사항</h3>
+            <div class="close">X 닫기</div>
+            <div class="text">
+                <br>
+                <p> 공지사항입니자.</p> <br>
+                ~~~~~~~~`~~~~~~~~~~~~  <br>
+                ~~~~~~~~`~~~~~~~~~~~~ <br>
+
+            </div>
+        </div>
     </div>
     <!-- //wrap -->
+    
 </body>
 </html>
