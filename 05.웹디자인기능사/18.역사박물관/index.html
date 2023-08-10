@@ -4,44 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>역사박물관</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./script/jquery-1.12.3.js"></script>
     <script src="./script/script.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div id="wrap">
+        <aside id="aside">
+            <h1 class="logo">
+                <a href="#"><img src="./images/logo.png" alt="로고"></a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">박물관 소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">박물관연혁</a></li>
+                            <li><a href="#">유물현황</a></li>
+                            <li><a href="#">관람안내</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">전시</a>
+                        <ul class="submenu">
+                            <li><a href="#">선사시대</a></li>
+                            <li><a href="#">삼국시대</a></li>
+                            <li><a href="#">조선시대</a></li>
+                            <li><a href="#">근대시대</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">연구</a>
+                        <ul class="submenu">
+                            <li><a href="#">생활유적</a></li>
+                            <li><a href="#">분묘유적</a></li>
+                            <li><a href="#">생산유적</a></li>
+                            <li><a href="#">통신유적</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">교육</a>
+                        <ul class="submenu">
+                            <li><a href="#">문화행사</a></li>
+                            <li><a href="#">진로체험</a></li>
+                            <li><a href="#">외부교육</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <!-- //aside -->
+
         <main id="main">
-            <header id="header">
-                <h1 class="logo"></h1>
-                <nav class="nav"></nav>
-            </header>
-            <!-- //header -->
-
             <section id="contents">
-                <article class="notice"></article>
-                <article class="gallery"></article>
-                <article class="link"></article>
+                <div class="notice">
+                    <h3>공지사항</h3>
+                    <ul>
+                        <li><a href="#" class="popupLayer">leorn ipsu color ist set.</a><span>2023-08-09</span></li>
+                        <li><a href="#">leorn ipsu color ist set.</a><span>2023-08-09</span></li>
+                        <li><a href="#">leorn ipsu color ist set.</a><span>2023-08-09</span></li>
+                        <li><a href="#">leorn ipsu color ist set.</a><span>2023-08-09</span></li>
+                    </ul>
+                </div>
+                <div class="gallery">
+                    <h3>갤러리</h3>
+                    <ul>
+                        <li><a href="#"><img src="./images/slider01.jpg" alt="갤러리1"></a><span>lorer ipsun dooc is soa</span></li>
+                        <li><a href="#"><img src="./images/slider01.jpg" alt="갤러리2"></a><span>lorer ipsun dooc is soa</span></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <ul>
+                        <li><a href="#"><img src="./images/slider01.jpg" alt="링크1"></a></li>
+                        <li><a href="#"><img src="./images/slider01.jpg" alt="링크2"></a></li>
+                        <li><a href="#"><img src="./images/slider01.jpg" alt="링크3"></a></li>
+                        <li><a href="#"><img src="./images/slider01.jpg" alt="링크4"></a></li>
+                    </ul>
+                </div>
             </section>
-            <!-- //contents -->
-
             <article id="slider">
                 <div class="sliderWrap">
-                    <div class="slider s1"><span>이미지1</span></div>
-                    <div class="slider s2"><span>이미지2</span></div>
-                    <div class="slider s3"><span>이미지3</span></div>
+                    <div class="sliderImg"><a href="#"><img src="./images/slider01.jpg" alt="슬라이드1"></a><span>이미지1</span></div>
+                    <div class="sliderImg"><a href="#"><img src="./images/slider02.jpg" alt="슬라이드1"></a><span>이미지2</span></div>
+                    <div class="sliderImg"><a href="#"><img src="./images/slider03.jpg" alt="슬라이드1"></a><span>이미지3</span></div>
                 </div>
-            </article>
-            <!-- //slider -->
 
+            </article>
         </main>
         <!-- //main -->
 
         <footer id="footer">
-            <div class="footer1"></div>
-            <div class="footer2"></div>
-            <div class="footer3"></div>
+            <div class="blogo">
+                <img src="./images/blogo.png" alt="하단로고">
+            </div>
+            <div class="copyright">
+                <p>dlkfj<br>
+                    sdlkfjf
+
+                </p>
+            </div>
+            <div class="fsite">
+                <select>
+                    <option value="#">패밀리사이트</option>
+                    <option value="#">패밀리사이트1</option>
+                    <option value="#">패밀리사이트2</option>
+                    <option value="#">패밀리사이트3</option>
+                </select>
+            </div>
         </footer>
         <!-- //footer -->
+        <div id="popup">
+            <h3>공지사항</h3>
+            <div class="close">X 닫기</div>
+            <div class="text"><br>
+                <p>공지사항입니다.</p>
+                <br>
+                니앙러니앙러<br>
+                니ㅏ이ㅏ런<br>
+                ㅣㅏ넝럴
+
+            </div>
+        </div>
     </div>
+    <!-- //wrap -->
 </body>
 </html>
