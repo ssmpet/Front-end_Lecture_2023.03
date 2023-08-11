@@ -1,43 +1,129 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영상박물관</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./script/jquery-1.12.3.js"></script>
     <script src="./script/script.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div id="wrap">
-        <main id="main">
-            <header id="header">
-                <h1 class="logo"></h1>
-                <nav class="nav"></nav>
-            </header>
-            <!-- //header -->
-            
-            <section id="contents">
-                <article class="banner"></article>
-                <article class="notice"></article>
-                <article class="gallery"></article>
-            </section>
-            <!-- //contents -->
+    <aside id="aside">
+        <h1 class="logo">
+            <a href="#"><img src="./images/logo.png" alt="로고"></a>
+        </h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">박물관 소개</a>
+                    <ul class="submenu">
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">박물관연혁</a></li>
+                        <li><a href="#">박물관 조직도</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">전시</a>
+                    <ul class="submenu">
+                        <li><a href="#">전시 리스트</a></li>
+                        <li><a href="#">전시일정</a></li>
+                        <li><a href="#">특별전</a></li>
+                        <li><a href="#">지역작가</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">체험행사</a>
+                    <ul class="submenu">
+                        <li><a href="#">문화행사</a></li>
+                        <li><a href="#">진로체험</a></li>
+                        <li><a href="#">명사특강</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul class="submenu">
+                        <li><a href="#">사용자메뉴얼</a></li>
+                        <li><a href="#">박물관 약도</a></li>
+                        <li><a href="#">게시판</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="spopmenu">
+                <a href="#">로그인</a>
+                <span>|</span>
+                <a href="#">회원가입</a>
+            </div>
+        </nav>
+    </aside>
+    <!-- //aside -->
+    <main id="main">
+        <section id="contents">
+            <div class="banner">
+                <div class="img">
+                    <img src="./images/slider01.jpg" alt="배너">
+                </div>
+                <div class="con">
+                    <h5>LLooren ipsun  color sitt cmnt</h5>
+                    <p>dlfkjlkjlsddfjfj<br>
+                        dldfkjsldkjf
+                    </p>
+                </div>
+                <div class="next">&gt;</div>
+            </div>
+            <div class="notice">
+                <h3>공지사항</h3>
+                <ul>
+                    <li><a href="#" class="popupLayer">Llimgglkj color met</a><span>2023-08-23</span></li>
+                    <li><a href="#">Llimgglkj color met</a><span>2023-08-23</span></li>
+                    <li><a href="#">Llimgglkj color met</a><span>2023-08-23</span></li>
+                    <li><a href="#">Llimgglkj color met</a><span>2023-08-23</span></li>
+                </ul>
 
-            <article id="slider">
+            </div>
+            <div class="gallery">
+                <h3>갤러리</h3>
+                <ul>
+                    <li><a href="#"><img src="./images/slider01.jpg" alt="갤러리1"></a><span>lerr impou  aoli a in</span></li>
+                    <li><a href="#"><img src="./images/slider01.jpg" alt="갤러리2"></a><span>lerr impou  aoli a in</span></li>
+                </ul>
+            </div>
+        </section>
+        <article id="slider">
+            <div class="sliderWrap">
+                <div class="sliderImg"><a href="#"><img src="./images/slider01.jpg" alt="슬라이드1"></a><span>이미지1</span></div>
+                <div class="sliderImg"><a href="#"><img src="./images/slider02.jpg" alt="슬라이드2"></a><span>이미지2</span></div>
+                <div class="sliderImg"><a href="#"><img src="./images/slider03.jpg" alt="슬라이드3"></a><span>이미지3</span></div>
 
-            </article>
-            <!-- //slider -->
+            </div>
+        </article>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <div class="blogo">
+            <img src="./images/blogo.png" alt="하단로고">
+        </div>
+        <div class="copyright">
+            <p>lekjflkj</p>
+            <p>copyright</p>
+        </div>
+        <div class="sns">
+            <div><img src="./images/f.png" alt="페이스북"></div>
+            <div><img src="./images/t.png" alt="트위터"></div>
+            <div><img src="./images/y.png" alt="유튭브"></div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <div id="popup">
+        <h3>공지사항</h3>
+        <div class="close">X 닫기</div>
+        <div class="text">
+            <br>
+            <p>공지사항입니다.</p><br>
+            ~~~~~~`~~~`~<br>
+            sdkdjff'alsdkfjalskdjfk
+        </div>
+    </div>
 
-        </main>
-        <!-- //main -->
-        
-        <footer id="footer">
-            <div class="footer1"></div>
-            <div class="footer2"></div>
-            <div class="footer3"></div>
-        </footer>
-        <!-- //footer -->
     </div>
     <!-- //wrap -->
 </body>
