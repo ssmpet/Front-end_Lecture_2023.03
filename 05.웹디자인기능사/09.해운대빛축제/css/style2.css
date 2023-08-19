@@ -20,9 +20,13 @@ a { text-decoration: none; color: #333333; }
 #aside .nav {
     width: 100%;
     height: 550px;
-    background-color: #676767;
+
+    /* background-color: #676767; */
 }
 
+.nav > ul {
+   padding: 10px;
+}
 .nav > ul > li > a {
    display: block;
    padding: 10px;
@@ -49,23 +53,125 @@ a { text-decoration: none; color: #333333; }
 #main {
     width: 80%;
     height: 650px;
-    background-color: #5c5959;
+    /* background-color: #5c5959; */
 }
 
 #slider { 
     width: 100%;
     height: 350px;
-    background-color: #524a4a;;
 }
+
+.sliderWrap > div {  
+   display: none;
+}
+
+.sliderWrap > div:first-child {
+   display: block;
+}
+
+.sliderWrap {
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+.sliderImg a {
+   width: 100%;
+}
+.sliderImg img {
+   width: 100%;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+.sliderImg span {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   padding: 10px 20px;
+   background-color: rgb(255, 255, 255, 0.9);
+}
+
+
 #contents {
-    width: 100%;
-    display: flex;
- }
- #contents .content1 {
-    width: 33.3333%;
-    height: 200px;
-    background-color: #e4d4d4;
-  }
+   width: 100%;
+   display: flex;
+}
+#contents .content1 {
+   width: 33.3333%;
+   height: 200px;
+   /* background-color: #e4d4d4; */
+}
+
+.con_btn {
+   display: flex;
+   text-align: center;
+   padding: 10px;
+}
+.con_btn > div {
+   width: 100px;
+   background-color: #734d4d;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   cursor: pointer;
+} 
+.con_btn > div:last-child {
+   background-color: #d63737;
+}
+.notice {
+   padding: 0 10px 0 10px;
+   /* background-color: #fff; */
+}
+
+.notice > ul {
+   width: 100%;
+   height: 95%;
+   /* margin-top: 10px; */
+   /* display: none; */
+   
+}
+.notice > ul > li {
+   font-size: 90%;
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px dotted #333;
+
+}
+
+.notice > ul > li > a:hover {
+   color: #db6666;   
+}
+.notice > ul > li > span {
+   font-size: 80%;
+}
+
+.gallery {
+   padding: 0 0 0 10px;
+   display: none;
+}
+
+.gallery > ul {
+   margin-top: 10px;
+   display: flex;
+}
+.gallery > ul > li {
+   width: 100%;
+}
+.gallery > ul > li > a {
+   width: 95%;
+   width: 80%;
+
+}
+.gallery > ul > li > a:hover {
+   opacity: 0.8;
+}
+
+
+.gallery > ul > li > a > img{
+   width: 90%;
+   height: 90%;
+}
+
  #contents .content2 { 
     width: 33.3333%;
     height: 200px;
