@@ -11,15 +11,26 @@ $(function(){
     let currentIndex = 0;
     setInterval(function(){
         let nextIndex = (currentIndex + 1) % 3;
-        $('.sliderImg').eq(currentIndex).fadeOut(1500);
-        $('.sliderImg').eq(nextIndex).fadeIn(1500);
+        $('.sliderImg').eq(currentIndex).fadeOut(1200);
+        $('.sliderImg').eq(nextIndex).fadeIn(1200);
         currentIndex = nextIndex;
     }, 3000);
 
-    $('.con_btn > div').click(function(){
-        let n = $(this).index();
-        $(this).css('background-color', "#db6666").siblings().css('background-color', "#dfdfdf");
-        $('.con_con > div').eq(n).show().siblings().hide(); 
+    let conBtn = $('.con_btn > div');
+    let conCon = $('.con_con > div');
 
+    conBtn.click(function(){
+        let n = $(this).index();
+        $(this).addClass("active").siblings().removeClass("active");
+        conCon.eq(n).show().siblings().hide(); 
+
+    });
+
+    $('.popupLayer').click(function(){
+        $('#popup').show();
+    }); 
+
+    $('.close').click(function(){
+        $('#popup').hide();
     });
 });
