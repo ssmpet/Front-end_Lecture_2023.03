@@ -1,26 +1,41 @@
 $(function(){
-    // 메뉴에 오버했을 때 자식 메뉴를 보여줘라!
-    $('.nav > ul > li').mouseover(function(){
-        $(this).find('.submenu').stop().slideDown(200);
+
+    $('.nav > ul > li').hover(function(){
+        $(this).find('.submenu').stop().slideDown();
+    },
+    
+    function(){
+        $(this).find('.submenu').stop().slideUp();
     });
-    $('.nav > ul > li').mouseout(function(){
-        $(this).find('.submenu').stop().slideUp(200);
+
+
+    let conTitle = $('.con_title > ul > li');
+    let conCon = $('.con_con > div');
+
+    conTitle.click(function(){
+        let index = $(this).index();
+        $(this).addClass('active').siblings().removeClass('active');
+        conCon.eq(index).show().siblings().hide();
+
     });
 
     let currentIndex = 0;
+    setInterval(function(){
+        let nextIndex = (currentIndex + 1) % 3;
 
-    $(".sliderWrap").append($('.slider').first().clone(true));
+        $('.sliderImg').eq(currentIndex).fadeOut(1200);
+        $('.sliderImg').eq(nextIndex).fadeIn(1200);
+        currentIndex = nextIndex;
 
-    setInterval(function() {
-        currentIndex++;
-        $('.sliderWrap').animate({marginTop: -currentIndex * 300 + "px"}, 600);
-
-        if (currentIndex == 3 ){
-            setTimeout(function(){
-                $('.sliderWrap').animate({marginTop: 0}, 0);
-                currentIndex = 0;
-            }, 700);
-        }
-        
     }, 3000);
+
+    $('.popupLayer').click(function(){
+        $('#popup').show();
+    });
+
+    $('.close').click(function(){
+        $('#popup').hide();
+    });
+
+
 });
